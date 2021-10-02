@@ -10,12 +10,15 @@ import SideBySideOnBrand from "../components/SideBySideOnBrand";
 import CenteredAccordion from "../components/CenteredAccordion";
 import { faCode, faHashtag, faPen } from "@fortawesome/free-solid-svg-icons";
 import HeaderCentered from "../components/HeaderCentered";
+import { usePwaAlreadyInstalled } from '../hooks/usePwaAlreadyInstalled';
 
 export default function Home() {
+  const { pwaInstall } = usePwaAlreadyInstalled();
+
   return (
     <>
       <Seo title="Novo Faciem | Home" description="Bienvenidos al Home" />
-      <HeaderCentered />
+      {pwaInstall || <HeaderCentered />}
       <SplitWithNavbar />
       <SimpleCentered1 />
       <SimpleOnBrand />
