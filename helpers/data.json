@@ -1,0 +1,46 @@
+{
+    "metatags": {
+        "title": "Novo Faciem",
+        "description": "Aplicación web progresiva corporativa"
+    },
+    "ComponentSplitWithImage": [
+        {
+            "image": "https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&blend=6366F1&sat=-100&blend-mode=multiply",
+            "title": "Bienvenidos al Home",
+            "subtitle": "Home",
+            "subtitle2": "Home",
+            "redirect": {
+                "text": "Home",
+                "href": ""
+            }
+        },
+        {
+            "image": "https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&blend=6366F1&sat=-100&blend-mode=multiply",
+            "title": "Bienvenidos a Nosotros",
+            "subtitle": "Nosotros",
+            "subtitle2": "Nosotros",
+            "redirect": {
+                "text": "Nosotros",
+                "href": ""
+            }
+        }
+    ],
+    "ComponentSimpleThreeColumn": [
+        {
+            "name1": "Competitive exchange rates",
+            "description1": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+            "name2": "No hidden fees",
+            "description2": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+            "name3": "Y ya lo ve, es para santi q lo mira por tv",
+            "description3": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione."
+        },
+        {
+            "name1": "Tres",
+            "description1": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+            "name2": "No hidden fees",
+            "description2": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+            "name3": "Transfers are instant",
+            "description3": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione."
+        }
+    ]
+}
