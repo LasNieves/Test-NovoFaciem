@@ -1,6 +1,6 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { XIcon } from "@heroicons/react/outline";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import ButtonPWA from "./ButtonPwa";
 
 export default function HeaderCentered() {
@@ -26,7 +26,7 @@ export default function HeaderCentered() {
                   Big news! We're excited to announce a brand new product.
                 </span>
                 <span className="block sm:ml-2 sm:inline-block">
-                  <ButtonPWA  />
+                  <ButtonPWA />
                 </span>
               </p>
             </div>

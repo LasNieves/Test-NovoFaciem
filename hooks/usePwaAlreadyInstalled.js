@@ -7,7 +7,7 @@ export const usePwaAlreadyInstalled = () => {
         if (window.matchMedia('(display-mode: standalone)').matches) {  
             setPwaInstall(true);
         };
-    }, [pwaInstall])
+    }, [])
 
     return {pwaInstall};
 };
