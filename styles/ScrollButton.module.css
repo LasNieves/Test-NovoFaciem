@@ -1,0 +1,28 @@
+
+  .scrollTop{
+    position: fixed;
+    right: 1.3rem;
+    padding: .3rem;
+    height: 50px;
+    width: 50px;
+    background: #FF5722;
+    border: solid 5px #AC3F1D;
+    border-radius: 50%;
+    z-index: 1000;
+    transition: .4s;
+    visibility: hidden;
+    cursor: pointer;
+    bottom: -20%;
+  }
+  
+  .scrolltopIcon{
+    color: #FBFEFD;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .showScroll{
+    visibility: visible;
+    bottom: 1.5rem;
+  }

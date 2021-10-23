@@ -1,6 +1,6 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { XIcon } from "@heroicons/react/outline";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import ButtonPWA from "./ButtonPwa";
 
 export default function HeaderCentered() {

@@ -20,5 +20,5 @@ export const useInstallPWA = () => {
   // } 
   
   return { promptInstall, supportsPWA};
-  
+
 };
