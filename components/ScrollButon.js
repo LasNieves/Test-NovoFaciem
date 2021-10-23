@@ -24,7 +24,11 @@ const ScrollButton = () => {
 
   return (
     <>
-      <span ref={refScroll} onClick={scrollToTop} className={styles.scrollTop}>
+      <button
+        ref={refScroll}
+        onClick={scrollToTop}
+        className={styles.scrollTop}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className={styles.scrollTopIcon}
@@ -39,7 +43,7 @@ const ScrollButton = () => {
             d="M5 15l7-7 7 7"
           />
         </svg>
-      </span>
+      </button>
     </>
   );
 };

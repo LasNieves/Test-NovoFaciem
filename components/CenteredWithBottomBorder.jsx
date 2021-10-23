@@ -1,6 +1,6 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { Fragment } from 'react'
-import { Popover, Transition } from '@headlessui/react'
+import { Fragment } from "react";
+import { Popover, Transition } from "@headlessui/react";
 import {
   BookmarkAltIcon,
   CalendarIcon,
@@ -14,70 +14,90 @@ import {
   SupportIcon,
   ViewGridIcon,
   XIcon,
-} from '@heroicons/react/outline'
-import { ChevronDownIcon } from '@heroicons/react/solid'
-import Link from 'next/link'
+} from "@heroicons/react/outline";
+import { ChevronDownIcon } from "@heroicons/react/solid";
+import Link from "next/link";
+import ToggleWithIcon from "./ToggleWithIcon";
 
 const solutions = [
   {
-    name: 'Analytics',
-    description: 'Get a better understanding of where your traffic is coming from.',
-    href: '#',
+    name: "Analytics",
+    description:
+      "Get a better understanding of where your traffic is coming from.",
+    href: "#",
     icon: ChartBarIcon,
   },
   {
-    name: 'Engagement',
-    description: 'Speak directly to your customers in a more meaningful way.',
-    href: '#',
+    name: "Engagement",
+    description: "Speak directly to your customers in a more meaningful way.",
+    href: "#",
     icon: CursorClickIcon,
   },
-  { name: 'Security', description: "Your customers' data will be safe and secure.", href: '#', icon: ShieldCheckIcon },
   {
-    name: 'Integrations',
+    name: "Security",
+    description: "Your customers' data will be safe and secure.",
+    href: "#",
+    icon: ShieldCheckIcon,
+  },
+  {
+    name: "Integrations",
     description: "Connect with third-party tools that you're already using.",
-    href: '#',
+    href: "#",
     icon: ViewGridIcon,
   },
   {
-    name: 'Automations',
-    description: 'Build strategic funnels that will drive your customers to convert',
-    href: '#',
+    name: "Automations",
+    description:
+      "Build strategic funnels that will drive your customers to convert",
+    href: "#",
     icon: RefreshIcon,
   },
-]
+];
 const callsToAction = [
-  { name: 'Watch Demo', href: '#', icon: PlayIcon },
-  { name: 'Contact Sales', href: '#', icon: PhoneIcon },
-]
+  { name: "Watch Demo", href: "#", icon: PlayIcon },
+  { name: "Contact Sales", href: "#", icon: PhoneIcon },
+];
 const resources = [
   {
-    name: 'Help Center',
-    description: 'Get all of your questions answered in our forums or contact support.',
-    href: '#',
+    name: "Help Center",
+    description:
+      "Get all of your questions answered in our forums or contact support.",
+    href: "#",
     icon: SupportIcon,
   },
   {
-    name: 'Guides',
-    description: 'Learn how to maximize our platform to get the most out of it.',
-    href: '#',
+    name: "Guides",
+    description:
+      "Learn how to maximize our platform to get the most out of it.",
+    href: "#",
     icon: BookmarkAltIcon,
   },
   {
-    name: 'Events',
-    description: 'See what meet-ups and other events we might be planning near you.',
-    href: '#',
+    name: "Events",
+    description:
+      "See what meet-ups and other events we might be planning near you.",
+    href: "#",
     icon: CalendarIcon,
   },
-  { name: 'Security', description: 'Understand how we take your privacy seriously.', href: '#', icon: ShieldCheckIcon },
-]
+  {
+    name: "Security",
+    description: "Understand how we take your privacy seriously.",
+    href: "#",
+    icon: ShieldCheckIcon,
+  },
+];
 const recentPosts = [
-  { id: 1, name: 'Boost your conversion rate', href: '#' },
-  { id: 2, name: 'How to use search engine optimization to drive traffic to your site', href: '#' },
-  { id: 3, name: 'Improve your customer experience', href: '#' },
-]
+  { id: 1, name: "Boost your conversion rate", href: "#" },
+  {
+    id: 2,
+    name: "How to use search engine optimization to drive traffic to your site",
+    href: "#",
+  },
+  { id: 3, name: "Improve your customer experience", href: "#" },
+];
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ");
 }
 
 export default function CenteredWithBottomBorder() {
@@ -85,6 +105,7 @@ export default function CenteredWithBottomBorder() {
     <Popover className="relative bg-white">
       {({ open }) => (
         <>
+          <ToggleWithIcon />
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
               <div className="flex justify-start lg:w-0 lg:flex-1">
@@ -111,15 +132,15 @@ export default function CenteredWithBottomBorder() {
                     <>
                       <Popover.Button
                         className={classNames(
-                          open ? 'text-gray-900' : 'text-gray-500',
-                          'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+                          open ? "text-gray-900" : "text-gray-500",
+                          "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                         )}
                       >
                         <span>Solutions</span>
                         <ChevronDownIcon
                           className={classNames(
-                            open ? 'text-gray-600' : 'text-gray-400',
-                            'ml-2 h-5 w-5 group-hover:text-gray-500'
+                            open ? "text-gray-600" : "text-gray-400",
+                            "ml-2 h-5 w-5 group-hover:text-gray-500"
                           )}
                           aria-hidden="true"
                         />
@@ -147,10 +168,17 @@ export default function CenteredWithBottomBorder() {
                                   href={item.href}
                                   className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                                 >
-                                  <item.icon className="flex-shrink-0 h-6 w-6 text-indigo-600" aria-hidden="true" />
+                                  <item.icon
+                                    className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                                    aria-hidden="true"
+                                  />
                                   <div className="ml-4">
-                                    <p className="text-base font-medium text-gray-900">{item.name}</p>
-                                    <p className="mt-1 text-sm text-gray-500">{item.description}</p>
+                                    <p className="text-base font-medium text-gray-900">
+                                      {item.name}
+                                    </p>
+                                    <p className="mt-1 text-sm text-gray-500">
+                                      {item.description}
+                                    </p>
                                   </div>
                                 </a>
                               ))}
@@ -162,7 +190,10 @@ export default function CenteredWithBottomBorder() {
                                     href={item.href}
                                     className="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-100"
                                   >
-                                    <item.icon className="flex-shrink-0 h-6 w-6 text-gray-400" aria-hidden="true" />
+                                    <item.icon
+                                      className="flex-shrink-0 h-6 w-6 text-gray-400"
+                                      aria-hidden="true"
+                                    />
                                     <span className="ml-3">{item.name}</span>
                                   </a>
                                 </div>
@@ -175,10 +206,16 @@ export default function CenteredWithBottomBorder() {
                   )}
                 </Popover>
 
-                <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
+                <a
+                  href="#"
+                  className="text-base font-medium text-gray-500 hover:text-gray-900"
+                >
                   Pricing
                 </a>
-                <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
+                <a
+                  href="#"
+                  className="text-base font-medium text-gray-500 hover:text-gray-900"
+                >
                   Docs
                 </a>
 
@@ -187,15 +224,15 @@ export default function CenteredWithBottomBorder() {
                     <>
                       <Popover.Button
                         className={classNames(
-                          open ? 'text-gray-900' : 'text-gray-500',
-                          'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+                          open ? "text-gray-900" : "text-gray-500",
+                          "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                         )}
                       >
                         <span>More</span>
                         <ChevronDownIcon
                           className={classNames(
-                            open ? 'text-gray-600' : 'text-gray-400',
-                            'ml-2 h-5 w-5 group-hover:text-gray-500'
+                            open ? "text-gray-600" : "text-gray-400",
+                            "ml-2 h-5 w-5 group-hover:text-gray-500"
                           )}
                           aria-hidden="true"
                         />
@@ -223,10 +260,17 @@ export default function CenteredWithBottomBorder() {
                                   href={item.href}
                                   className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                                 >
-                                  <item.icon className="flex-shrink-0 h-6 w-6 text-indigo-600" aria-hidden="true" />
+                                  <item.icon
+                                    className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                                    aria-hidden="true"
+                                  />
                                   <div className="ml-4">
-                                    <p className="text-base font-medium text-gray-900">{item.name}</p>
-                                    <p className="mt-1 text-sm text-gray-500">{item.description}</p>
+                                    <p className="text-base font-medium text-gray-900">
+                                      {item.name}
+                                    </p>
+                                    <p className="mt-1 text-sm text-gray-500">
+                                      {item.description}
+                                    </p>
                                   </div>
                                 </a>
                               ))}
@@ -238,8 +282,14 @@ export default function CenteredWithBottomBorder() {
                                 </h3>
                                 <ul className="mt-4 space-y-4">
                                   {recentPosts.map((post) => (
-                                    <li key={post.id} className="text-base truncate">
-                                      <a href={post.href} className="font-medium text-gray-900 hover:text-gray-700">
+                                    <li
+                                      key={post.id}
+                                      className="text-base truncate"
+                                    >
+                                      <a
+                                        href={post.href}
+                                        className="font-medium text-gray-900 hover:text-gray-700"
+                                      >
                                         {post.name}
                                       </a>
                                     </li>
@@ -247,9 +297,13 @@ export default function CenteredWithBottomBorder() {
                                 </ul>
                               </div>
                               <div className="mt-5 text-sm">
-                                <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
-                                  {' '}
-                                  View all posts <span aria-hidden="true">&rarr;</span>
+                                <a
+                                  href="#"
+                                  className="font-medium text-indigo-600 hover:text-indigo-500"
+                                >
+                                  {" "}
+                                  View all posts{" "}
+                                  <span aria-hidden="true">&rarr;</span>
                                 </a>
                               </div>
                             </div>
@@ -261,7 +315,10 @@ export default function CenteredWithBottomBorder() {
                 </Popover>
               </Popover.Group>
               <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-                <a href="#" className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
+                <a
+                  href="#"
+                  className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
+                >
                   Sign in
                 </a>
                 <a
@@ -314,8 +371,13 @@ export default function CenteredWithBottomBorder() {
                           href={item.href}
                           className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                         >
-                          <item.icon className="flex-shrink-0 h-6 w-6 text-indigo-600" aria-hidden="true" />
-                          <span className="ml-3 text-base font-medium text-gray-900">{item.name}</span>
+                          <item.icon
+                            className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                            aria-hidden="true"
+                          />
+                          <span className="ml-3 text-base font-medium text-gray-900">
+                            {item.name}
+                          </span>
                         </a>
                       ))}
                     </nav>
@@ -323,11 +385,17 @@ export default function CenteredWithBottomBorder() {
                 </div>
                 <div className="py-6 px-5 space-y-6">
                   <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                    <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
+                    <a
+                      href="#"
+                      className="text-base font-medium text-gray-900 hover:text-gray-700"
+                    >
                       Pricing
                     </a>
 
-                    <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
+                    <a
+                      href="#"
+                      className="text-base font-medium text-gray-900 hover:text-gray-700"
+                    >
                       Docs
                     </a>
                     {resources.map((item) => (
@@ -348,8 +416,11 @@ export default function CenteredWithBottomBorder() {
                       Sign up
                     </a>
                     <p className="mt-6 text-center text-base font-medium text-gray-500">
-                      Existing customer?{' '}
-                      <a href="#" className="text-indigo-600 hover:text-indigo-500">
+                      Existing customer?{" "}
+                      <a
+                        href="#"
+                        className="text-indigo-600 hover:text-indigo-500"
+                      >
                         Sign in
                       </a>
                     </p>
@@ -361,5 +432,5 @@ export default function CenteredWithBottomBorder() {
         </>
       )}
     </Popover>
-  )
+  );
 }

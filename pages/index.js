@@ -12,8 +12,6 @@ import { faCode, faHashtag, faPen } from "@fortawesome/free-solid-svg-icons";
 import HeaderCentered from "../components/HeaderCentered";
 import { usePwaAlreadyInstalled } from "../hooks/usePwaAlreadyInstalled";
 import { usePwaInNavigator } from "../hooks/usePwaInNavigator";
-import { useEffect, useState } from "react";
-import { useTheme } from "next-themes";
 import ToggleWithIcon from "../components/ToggleWithIcon";
 import ScrollButton from "../components/ScrollButon";
 
@@ -21,26 +19,12 @@ export default function Home() {
   const { pwaInstall } = usePwaAlreadyInstalled();
   const { isVisibleInNavigator } = usePwaInNavigator();
 
-  const [isMounted, setIsMounted] = useState(false);
-
-  const { theme, setTheme } = useTheme();
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  const switchTheme = () => {
-    if (isMounted) {
-      setTheme(theme === "light" ? "dark" : "light");
-    }
-  };
-
   return (
     <>
       <Seo title="Novo Faciem | Home" description="Bienvenidos al Home" />
       {(!pwaInstall, isVisibleInNavigator && <HeaderCentered />)}
-      <button onClick={switchTheme}>
-        <ToggleWithIcon />
-      </button>
+        
+    
       <SplitWithNavbar />
       <SimpleCentered1 />
       <SimpleOnBrand />

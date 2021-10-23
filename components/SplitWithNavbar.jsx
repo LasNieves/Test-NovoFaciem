@@ -1,6 +1,6 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { Fragment } from 'react'
-import { Popover, Transition } from '@headlessui/react'
+import { Fragment } from "react";
+import { Popover, Transition } from "@headlessui/react";
 import {
   BookmarkAltIcon,
   CalendarIcon,
@@ -14,64 +14,84 @@ import {
   SupportIcon,
   ViewGridIcon,
   XIcon,
-} from '@heroicons/react/outline'
-import { ChevronDownIcon } from '@heroicons/react/solid'
-import Link from 'next/link'
+} from "@heroicons/react/outline";
+import { ChevronDownIcon } from "@heroicons/react/solid";
+import Link from "next/link";
+import ToggleWithIcon from "./ToggleWithIcon";
 
 const features = [
   {
-    name: 'Inicial',
-    href: '/inicial',
-    description: 'Build strategic funnels that will drive your customers to convert',
+    name: "Inicial",
+    href: "/inicial",
+    description:
+      "Build strategic funnels that will drive your customers to convert",
     icon: RefreshIcon,
   },
-  { name: 'Primario', href: '/primario', description: "Your customers' data will be safe and secure.", icon: ShieldCheckIcon },
   {
-    name: 'Secundario',
-    href: '/secundario',
+    name: "Primario",
+    href: "/primario",
+    description: "Your customers' data will be safe and secure.",
+    icon: ShieldCheckIcon,
+  },
+  {
+    name: "Secundario",
+    href: "/secundario",
     description: "Connect with third-party tools that you're already using.",
     icon: ViewGridIcon,
   },
   {
-    name: 'Terciario',
-    href: '/terciario',
-    description: 'Build strategic funnels that will drive your customers to convert',
+    name: "Terciario",
+    href: "/terciario",
+    description:
+      "Build strategic funnels that will drive your customers to convert",
     icon: RefreshIcon,
   },
-]
+];
 const callsToAction = [
-  { name: 'Watch Demo', href: '#', icon: PlayIcon },
-  { name: 'Contact Sales', href: '#', icon: PhoneIcon },
-]
+  { name: "Watch Demo", href: "#", icon: PlayIcon },
+  { name: "Contact Sales", href: "#", icon: PhoneIcon },
+];
 const resources = [
   {
-    name: 'Help Center',
-    description: 'Get all of your questions answered in our forums or contact support.',
-    href: '#',
+    name: "Help Center",
+    description:
+      "Get all of your questions answered in our forums or contact support.",
+    href: "#",
     icon: SupportIcon,
   },
   {
-    name: 'Guides',
-    description: 'Learn how to maximize our platform to get the most out of it.',
-    href: '#',
+    name: "Guides",
+    description:
+      "Learn how to maximize our platform to get the most out of it.",
+    href: "#",
     icon: BookmarkAltIcon,
   },
   {
-    name: 'Events',
-    description: 'See what meet-ups and other events we might be planning near you.',
-    href: '#',
+    name: "Events",
+    description:
+      "See what meet-ups and other events we might be planning near you.",
+    href: "#",
     icon: CalendarIcon,
   },
-  { name: 'Security', description: 'Understand how we take your privacy seriously.', href: '#', icon: ShieldCheckIcon },
-]
+  {
+    name: "Security",
+    description: "Understand how we take your privacy seriously.",
+    href: "#",
+    icon: ShieldCheckIcon,
+  },
+];
 const recentPosts = [
-  { id: 1, name: 'Boost your conversion rate', href: '#' },
-  { id: 2, name: 'How to use search engine optimization to drive traffic to your site', href: '#' },
-  { id: 3, name: 'Improve your customer experience', href: '#' },
-]
+  { id: 1, name: "Boost your conversion rate", href: "#" },
+  {
+    id: 2,
+    name: "How to use search engine optimization to drive traffic to your site",
+    href: "#",
+  },
+  { id: 3, name: "Improve your customer experience", href: "#" },
+];
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ");
 }
 
 export default function SplitWithNavbar() {
@@ -106,15 +126,15 @@ export default function SplitWithNavbar() {
                       <>
                         <Popover.Button
                           className={classNames(
-                            open ? 'text-gray-900' : 'text-gray-500',
-                            'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 '
+                            open ? "text-gray-900" : "text-gray-500",
+                            "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 "
                           )}
                         >
                           <span>Niveles</span>
                           <ChevronDownIcon
                             className={classNames(
-                              open ? 'text-gray-600' : 'text-gray-400',
-                              'ml-2 h-5 w-5 group-hover:text-gray-500'
+                              open ? "text-gray-600" : "text-gray-400",
+                              "ml-2 h-5 w-5 group-hover:text-gray-500"
                             )}
                             aria-hidden="true"
                           />
@@ -143,10 +163,17 @@ export default function SplitWithNavbar() {
                                     className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                                   >
                                     <div className="ml-3 p-3 cursor-pointer hover:bg-gray-50 flex items-start rounded-lg">
-                                      <item.icon className="flex-shrink-0 h-6 w-6 text-indigo-600" aria-hidden="true" />
+                                      <item.icon
+                                        className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                                        aria-hidden="true"
+                                      />
                                       <div className="ml-4">
-                                        <p className="text-base font-medium text-gray-900">{item.name}</p>
-                                        <p className="mt-1 text-sm text-gray-500">{item.description}</p>
+                                        <p className="text-base font-medium text-gray-900">
+                                          {item.name}
+                                        </p>
+                                        <p className="mt-1 text-sm text-gray-500">
+                                          {item.description}
+                                        </p>
                                       </div>
                                     </div>
                                   </Link>
@@ -159,7 +186,10 @@ export default function SplitWithNavbar() {
                                       href={item.href}
                                       className="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-100"
                                     >
-                                      <item.icon className="flex-shrink-0 h-6 w-6 text-gray-400" aria-hidden="true" />
+                                      <item.icon
+                                        className="flex-shrink-0 h-6 w-6 text-gray-400"
+                                        aria-hidden="true"
+                                      />
                                       <span className="ml-3">{item.name}</span>
                                     </a>
                                   </div>
@@ -173,9 +203,14 @@ export default function SplitWithNavbar() {
                   </Popover>
 
                   <Link href="/nosotros">
-                    <p className="text-base font-medium text-gray-500 hover:text-gray-900 cursor-pointer">Nosotros</p>
+                    <p className="text-base font-medium text-gray-500 hover:text-gray-900 cursor-pointer">
+                      Nosotros
+                    </p>
                   </Link>
-                  <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
+                  <a
+                    href="#"
+                    className="text-base font-medium text-gray-500 hover:text-gray-900"
+                  >
                     Docs
                   </a>
 
@@ -184,15 +219,15 @@ export default function SplitWithNavbar() {
                       <>
                         <Popover.Button
                           className={classNames(
-                            open ? 'text-gray-900' : 'text-gray-500',
-                            'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+                            open ? "text-gray-900" : "text-gray-500",
+                            "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                           )}
                         >
                           <span>More</span>
                           <ChevronDownIcon
                             className={classNames(
-                              open ? 'text-gray-600' : 'text-gray-400',
-                              'ml-2 h-5 w-5 group-hover:text-gray-500'
+                              open ? "text-gray-600" : "text-gray-400",
+                              "ml-2 h-5 w-5 group-hover:text-gray-500"
                             )}
                             aria-hidden="true"
                           />
@@ -220,10 +255,17 @@ export default function SplitWithNavbar() {
                                     href={item.href}
                                     className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                                   >
-                                    <item.icon className="flex-shrink-0 h-6 w-6 text-indigo-600" aria-hidden="true" />
+                                    <item.icon
+                                      className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                                      aria-hidden="true"
+                                    />
                                     <div className="ml-4">
-                                      <p className="text-base font-medium text-gray-900">{item.name}</p>
-                                      <p className="mt-1 text-sm text-gray-500">{item.description}</p>
+                                      <p className="text-base font-medium text-gray-900">
+                                        {item.name}
+                                      </p>
+                                      <p className="mt-1 text-sm text-gray-500">
+                                        {item.description}
+                                      </p>
                                     </div>
                                   </a>
                                 ))}
@@ -235,8 +277,14 @@ export default function SplitWithNavbar() {
                                   </h3>
                                   <ul className="mt-4 space-y-4">
                                     {recentPosts.map((item) => (
-                                      <li key={item.id} className="text-base truncate">
-                                        <a href={item.href} className="font-medium text-gray-900 hover:text-gray-700">
+                                      <li
+                                        key={item.id}
+                                        className="text-base truncate"
+                                      >
+                                        <a
+                                          href={item.href}
+                                          className="font-medium text-gray-900 hover:text-gray-700"
+                                        >
                                           {item.name}
                                         </a>
                                       </li>
@@ -244,9 +292,13 @@ export default function SplitWithNavbar() {
                                   </ul>
                                 </div>
                                 <div className="mt-5 text-sm">
-                                  <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
-                                    {' '}
-                                    View all posts <span aria-hidden="true">&rarr;</span>
+                                  <a
+                                    href="#"
+                                    className="font-medium text-indigo-600 hover:text-indigo-500"
+                                  >
+                                    {" "}
+                                    View all posts{" "}
+                                    <span aria-hidden="true">&rarr;</span>
                                   </a>
                                 </div>
                               </div>
@@ -257,8 +309,12 @@ export default function SplitWithNavbar() {
                     )}
                   </Popover>
                 </Popover.Group>
+                <ToggleWithIcon />
                 <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-                  <a href="#" className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
+                  <a
+                    href="#"
+                    className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
+                  >
                     Sign in
                   </a>
                   <a
@@ -311,8 +367,13 @@ export default function SplitWithNavbar() {
                             href={item.href}
                             className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                           >
-                            <item.icon className="flex-shrink-0 h-6 w-6 text-indigo-600" aria-hidden="true" />
-                            <span className="ml-3 text-base font-medium text-gray-900">{item.name}</span>
+                            <item.icon
+                              className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                              aria-hidden="true"
+                            />
+                            <span className="ml-3 text-base font-medium text-gray-900">
+                              {item.name}
+                            </span>
                           </a>
                         ))}
                       </nav>
@@ -320,11 +381,17 @@ export default function SplitWithNavbar() {
                   </div>
                   <div className="py-6 px-5 space-y-6">
                     <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                      <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
+                      <a
+                        href="#"
+                        className="text-base font-medium text-gray-900 hover:text-gray-700"
+                      >
                         Pricing
                       </a>
 
-                      <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
+                      <a
+                        href="#"
+                        className="text-base font-medium text-gray-900 hover:text-gray-700"
+                      >
                         Docs
                       </a>
                       {resources.map((item) => (
@@ -346,7 +413,10 @@ export default function SplitWithNavbar() {
                       </a>
                       <p className="mt-6 text-center text-base font-medium text-gray-500">
                         Existing customer?
-                        <a href="#" className="text-indigo-600 hover:text-indigo-500">
+                        <a
+                          href="#"
+                          className="text-indigo-600 hover:text-indigo-500"
+                        >
                           Sign in
                         </a>
                       </p>
@@ -363,12 +433,15 @@ export default function SplitWithNavbar() {
         <div className="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-48 lg:text-left">
           <div className="px-4 lg:w-1/2 sm:px-8 xl:pr-16">
             <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
-              <span className="block xl:inline">Data to enrich your</span>{' '}
-              <span className="block text-indigo-600 xl:inline">online business</span>
+              <span className="block xl:inline">Data to enrich your</span>{" "}
+              <span className="block text-indigo-600 xl:inline">
+                online business
+              </span>
             </h1>
             <p className="mt-3 max-w-md mx-auto text-lg text-gray-500 sm:text-xl md:mt-5 md:max-w-3xl">
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-              fugiat veniam occaecat fugiat aliqua.
+              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
+              lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
+              fugiat aliqua.
             </p>
             <div className="mt-10 sm:flex sm:justify-center lg:justify-start">
               <div className="rounded-md shadow">
@@ -399,5 +472,5 @@ export default function SplitWithNavbar() {
         </div>
       </main>
     </div>
-  )
+  );
 }
