@@ -9,11 +9,13 @@ export const useDarkMode = () => {
     setIsMounted(true);
   }, []);
 
+  // const userMedia = window.matchMedia('(prefers-color-scheme: dark)');
+
   const switchTheme = () => {
     if (isMounted) {
       setTheme(theme === "light" ? "dark" : "light");
     }
   };
 
-  return { switchTheme };
+  return { switchTheme, theme };
 };

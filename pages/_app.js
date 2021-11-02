@@ -1,10 +1,13 @@
 import "tailwindcss/tailwind.css";
 import { ThemeProvider } from "next-themes";
+import { SwitchProvider } from "../context/SwitchContext";
 
 function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider attribute="class">
-      <Component {...pageProps} />
+      <SwitchProvider>
+        <Component {...pageProps} />
+      </SwitchProvider>
     </ThemeProvider>
   );
 }

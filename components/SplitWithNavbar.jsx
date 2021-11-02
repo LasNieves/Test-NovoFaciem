@@ -309,7 +309,10 @@ export default function SplitWithNavbar() {
                     )}
                   </Popover>
                 </Popover.Group>
-                <ToggleWithIcon />
+                <div className="mt-1 hidden md:inline-block ">
+                  <ToggleWithIcon />
+                </div>
+
                 <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
                   <a
                     href="#"
@@ -346,11 +349,7 @@ export default function SplitWithNavbar() {
                   <div className="pt-5 pb-6 px-5">
                     <div className="flex items-center justify-between">
                       <div>
-                        <img
-                          className="h-8 w-auto"
-                          src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                          alt="Workflow"
-                        />
+                        <ToggleWithIcon />
                       </div>
                       <div className="-mr-2">
                         <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">

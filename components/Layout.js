@@ -19,7 +19,7 @@ const Layout = ({ children, title, description, banner }) => {
       {(banner, !pwaInstall, isVisibleInNavigator && <HeaderCentered />)}
       <CenteredWithBottomBorder />
       <main>{children}</main>
-      <ScrollButton />
+      <ScrollButton />                      
       <SimpleCentered2 />
     </>
   );
