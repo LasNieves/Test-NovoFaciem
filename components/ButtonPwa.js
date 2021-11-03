@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import { useInstallPWA } from "../hooks/useInstallPwa";
+import React, { useContext, useState } from "react";
+import BannerContext from "../context/BannerContext";
 import SimpleWithDismissButton from "./SimpleWithDismissButton";
 
 const ButtonPWA = () => {
-  const { promptInstall, supportsPWA } = useInstallPWA();
   const [open, setOpen] = useState(true);
   const [visible, setVisible] = useState(false);
+  const {promptInstall, supportsPWA} = useContext(BannerContext)
 
   const onClick = (evt) => {
     evt.preventDefault();
