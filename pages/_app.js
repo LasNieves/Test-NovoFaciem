@@ -2,7 +2,6 @@ import "tailwindcss/tailwind.css";
 import { ThemeProvider } from "next-themes";
 import { SwitchProvider } from "../context/SwitchContext";
 import { BannerProvider } from "../context/BannerContext";
-import { BannerCloseProvider } from "../context/BannerCloseContext";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
@@ -10,9 +9,7 @@ function MyApp({ Component, pageProps }) {
     <ThemeProvider attribute="class">
       <SwitchProvider>
         <BannerProvider>
-          <BannerCloseProvider>
-            <Component {...pageProps} />
-          </BannerCloseProvider>
+          <Component {...pageProps} />
         </BannerProvider>
       </SwitchProvider>
     </ThemeProvider>

@@ -12,7 +12,7 @@ const Layout = ({ children, title, description}) => {
   return (
     <>
       <Seo title={title} description={description} />
-      {!pwaInstall, isVisibleInNavigator && (<HeaderCentered />)}
+      {!pwaInstall && isVisibleInNavigator && (<HeaderCentered />)}
       <CenteredWithBottomBorder />
       <main>{children}</main>
       <ScrollButton />

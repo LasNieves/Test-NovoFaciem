@@ -364,19 +364,20 @@ export default function CenteredWithBottomBorder() {
                   <div className="mt-6">
                     <nav className="grid gap-y-8">
                       {solutions.map((item) => (
-                        <a
+                        <Link
                           key={item.name}
                           href={item.href}
-                          className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                         >
-                          <item.icon
-                            className="flex-shrink-0 h-6 w-6 text-indigo-600"
-                            aria-hidden="true"
-                          />
-                          <span className="ml-3 text-base font-medium text-gray-900">
-                            {item.name}
-                          </span>
-                        </a>
+                          <div className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+                            <item.icon
+                              className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                              aria-hidden="true"
+                            />
+                            <span className="ml-3 text-base font-medium text-gray-900">
+                              {item.name}
+                            </span>
+                          </div>
+                        </Link>
                       ))}
                     </nav>
                   </div>
@@ -399,13 +400,15 @@ export default function CenteredWithBottomBorder() {
                       </p>
                     </Link>
                     {resources.map((item) => (
-                      <a
+                      <Link
                         key={item.name}
                         href={item.href}
-                        className="text-base font-medium text-gray-900 hover:text-gray-700"
                       >
-                        {item.name}
-                      </a>
+                        <p className="text-base font-medium text-gray-900 hover:text-gray-70">
+                          {item.name}
+                        </p>
+
+                      </Link>
                     ))}
                   </div>
                   <div>
