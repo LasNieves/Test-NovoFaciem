@@ -7,7 +7,7 @@ import ActionsWithSharedBorders from '../components/ActionsWithSharedBorders';
 
 const Terciario = () => {
     return (
-       <Layout title="Novo Faciem | Terciario" description="Nivel Terciario" banner={true}>
+       <Layout title="Novo Faciem | Terciario" description="Nivel Terciario" >
            <SplitWithImage/>
            <Centered2x2Grid/>
             <SimpleCentered1/>

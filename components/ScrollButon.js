@@ -2,9 +2,9 @@ import { useScroll } from "../hooks/useScroll";
 import styles from "../styles/ScrollButton.module.css";
 import React, { useRef, useEffect } from "react";
 
+
 const ScrollButton = () => {
   const { isVisible } = useScroll();
-
   let refScroll = useRef();
 
   useEffect(() => {

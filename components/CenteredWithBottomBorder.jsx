@@ -21,36 +21,29 @@ import ToggleWithIcon from "./ToggleWithIcon";
 
 const solutions = [
   {
-    name: "Analytics",
+    name: "Inicial",
     description:
       "Get a better understanding of where your traffic is coming from.",
-    href: "#",
+    href: "/inicial",
     icon: ChartBarIcon,
   },
   {
-    name: "Engagement",
+    name: "Primario",
     description: "Speak directly to your customers in a more meaningful way.",
-    href: "#",
+    href: "/primario",
     icon: CursorClickIcon,
   },
   {
-    name: "Security",
+    name: "Secundario",
     description: "Your customers' data will be safe and secure.",
-    href: "#",
+    href: "/secundario",
     icon: ShieldCheckIcon,
   },
   {
-    name: "Integrations",
+    name: "Terciario",
     description: "Connect with third-party tools that you're already using.",
-    href: "#",
+    href: "/terciario",
     icon: ViewGridIcon,
-  },
-  {
-    name: "Automations",
-    description:
-      "Build strategic funnels that will drive your customers to convert",
-    href: "#",
-    icon: RefreshIcon,
   },
 ];
 const callsToAction = [
@@ -59,31 +52,25 @@ const callsToAction = [
 ];
 const resources = [
   {
-    name: "Help Center",
+    name: "Parroquial",
     description:
       "Get all of your questions answered in our forums or contact support.",
-    href: "#",
+    href: "/otros/parroquial",
     icon: SupportIcon,
   },
   {
-    name: "Guides",
+    name: "Autoridades",
     description:
       "Learn how to maximize our platform to get the most out of it.",
-    href: "#",
+    href: "/otros/autoridades",
     icon: BookmarkAltIcon,
   },
   {
-    name: "Events",
+    name: "Eventos",
     description:
       "See what meet-ups and other events we might be planning near you.",
-    href: "#",
+    href: "/otros/eventos",
     icon: CalendarIcon,
-  },
-  {
-    name: "Security",
-    description: "Understand how we take your privacy seriously.",
-    href: "#",
-    icon: ShieldCheckIcon,
   },
 ];
 const recentPosts = [
@@ -112,7 +99,7 @@ export default function CenteredWithBottomBorder() {
                   <div>
                     <span className="sr-only">Workflow</span>
                     <img
-                      className="h-8 w-auto sm:h-10"
+                      className="cursor-pointer h-8 w-auto sm:h-10"
                       src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
                       alt=""
                     />
@@ -126,16 +113,26 @@ export default function CenteredWithBottomBorder() {
                 </Popover.Button>
               </div>
               <Popover.Group as="nav" className="hidden md:flex space-x-10">
+
+                <Link
+                  href="/"
+                  className="text-base font-medium text-gray-500 hover:text-gray-900"
+                >
+                  <p className="cursor-pointer text-base font-medium text-gray-500 hover:text-gray-900">
+                    Inicio
+                  </p>
+                </Link>
+
                 <Popover className="relative">
                   {({ open }) => (
                     <>
                       <Popover.Button
                         className={classNames(
                           open ? "text-gray-900" : "text-gray-500",
-                          "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                          "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 "
                         )}
                       >
-                        <span>Solutions</span>
+                        <span>Niveles</span>
                         <ChevronDownIcon
                           className={classNames(
                             open ? "text-gray-600" : "text-gray-400",
@@ -162,24 +159,26 @@ export default function CenteredWithBottomBorder() {
                           <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                             <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                               {solutions.map((item) => (
-                                <a
+                                <Link
                                   key={item.name}
                                   href={item.href}
                                   className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                                 >
-                                  <item.icon
-                                    className="flex-shrink-0 h-6 w-6 text-indigo-600"
-                                    aria-hidden="true"
-                                  />
-                                  <div className="ml-4">
-                                    <p className="text-base font-medium text-gray-900">
-                                      {item.name}
-                                    </p>
-                                    <p className="mt-1 text-sm text-gray-500">
-                                      {item.description}
-                                    </p>
+                                  <div className="ml-3 p-3 cursor-pointer hover:bg-gray-50 flex items-start rounded-lg">
+                                    <item.icon
+                                      className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                                      aria-hidden="true"
+                                    />
+                                    <div className="ml-4">
+                                      <p className="text-base font-medium text-gray-900">
+                                        {item.name}
+                                      </p>
+                                      <p className="mt-1 text-sm text-gray-500">
+                                        {item.description}
+                                      </p>
+                                    </div>
                                   </div>
-                                </a>
+                                </Link>
                               ))}
                             </div>
                             <div className="px-5 py-5 bg-gray-50 space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
@@ -205,18 +204,14 @@ export default function CenteredWithBottomBorder() {
                   )}
                 </Popover>
 
-                <a
-                  href="#"
-                  className="text-base font-medium text-gray-500 hover:text-gray-900"
+                <Link
+                  href="/nosotros"
                 >
-                  Pricing
-                </a>
-                <a
-                  href="#"
-                  className="text-base font-medium text-gray-500 hover:text-gray-900"
-                >
-                  Docs
-                </a>
+                  <p className="cursor-pointer text-base font-medium text-gray-500 hover:text-gray-900"
+                  >
+                    Nosotros
+                  </p>
+                </Link>
 
                 <Popover className="relative">
                   {({ open }) => (
@@ -224,10 +219,10 @@ export default function CenteredWithBottomBorder() {
                       <Popover.Button
                         className={classNames(
                           open ? "text-gray-900" : "text-gray-500",
-                          "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                          "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 "
                         )}
                       >
-                        <span>More</span>
+                        <span>Otros</span>
                         <ChevronDownIcon
                           className={classNames(
                             open ? "text-gray-600" : "text-gray-400",
@@ -254,24 +249,26 @@ export default function CenteredWithBottomBorder() {
                           <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                             <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                               {resources.map((item) => (
-                                <a
+                                <Link
                                   key={item.name}
                                   href={item.href}
                                   className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                                 >
-                                  <item.icon
-                                    className="flex-shrink-0 h-6 w-6 text-indigo-600"
-                                    aria-hidden="true"
-                                  />
-                                  <div className="ml-4">
-                                    <p className="text-base font-medium text-gray-900">
-                                      {item.name}
-                                    </p>
-                                    <p className="mt-1 text-sm text-gray-500">
-                                      {item.description}
-                                    </p>
+                                  <div className="ml-3 p-3 cursor-pointer hover:bg-gray-50 flex items-start rounded-lg">
+                                    <item.icon
+                                      className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                                      aria-hidden="true"
+                                    />
+                                    <div className="ml-4">
+                                      <p className="text-base font-medium text-gray-900">
+                                        {item.name}
+                                      </p>
+                                      <p className="mt-1 text-sm text-gray-500">
+                                        {item.description}
+                                      </p>
+                                    </div>
                                   </div>
-                                </a>
+                                </Link>
                               ))}
                             </div>
                             <div className="px-5 py-5 bg-gray-50 sm:px-8 sm:py-8">
@@ -317,18 +314,21 @@ export default function CenteredWithBottomBorder() {
                 <ToggleWithIcon />
               </div>
               <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-                <a
-                  href="#"
-                  className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
+                <Link
+                  href="/siena"
                 >
-                  Sign in
-                </a>
-                <a
-                  href="#"
+                  <p className="cursor-pointer whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
+                    Sign in
+                  </p>
+                </Link>
+                <Link
+                  href="/siena"
                   className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
                 >
-                  Sign up
-                </a>
+                  <p className="cursor-pointer ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
+                    Sign up
+                  </p>
+                </Link>
               </div>
             </div>
           </div>
@@ -383,19 +383,21 @@ export default function CenteredWithBottomBorder() {
                 </div>
                 <div className="py-6 px-5 space-y-6">
                   <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                    <a
-                      href="#"
-                      className="text-base font-medium text-gray-900 hover:text-gray-700"
+                    <Link
+                      href="/nosotros"
                     >
-                      Pricing
-                    </a>
+                      <p className="cursor-pointer text-base font-medium text-gray-900 hover:text-gray-700">
+                        Nosotros
+                      </p>
+                    </Link>
 
-                    <a
-                      href="#"
-                      className="text-base font-medium text-gray-900 hover:text-gray-700"
+                    <Link
+                      href="/blog"
                     >
-                      Docs
-                    </a>
+                      <p className="cursor-pointer text-base font-medium text-gray-900 hover:text-gray-700">
+                        Blog
+                      </p>
+                    </Link>
                     {resources.map((item) => (
                       <a
                         key={item.name}
@@ -407,20 +409,22 @@ export default function CenteredWithBottomBorder() {
                     ))}
                   </div>
                   <div>
-                    <a
-                      href="#"
-                      className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+                    <Link
+                      href="/siena"
                     >
-                      Sign up
-                    </a>
+                      <p className="cursor-pointer w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
+                        Sign up
+                      </p>
+                    </Link>
                     <p className="mt-6 text-center text-base font-medium text-gray-500">
-                      Existing customer?{" "}
-                      <a
-                        href="#"
-                        className="text-indigo-600 hover:text-indigo-500"
+                      Existing customer?
+                      <Link
+                        href="/siena"
                       >
-                        Sign in
-                      </a>
+                        <p className="inline-block cursor-pointer text-indigo-600 hover:text-indigo-500">
+                          Sign in
+                        </p>
+                      </Link>
                     </p>
                   </div>
                 </div>

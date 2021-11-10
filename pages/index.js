@@ -10,14 +10,12 @@ import SideBySideOnBrand from "../components/SideBySideOnBrand";
 import CenteredAccordion from "../components/CenteredAccordion";
 import { faCode, faHashtag, faPen } from "@fortawesome/free-solid-svg-icons";
 import HeaderCentered from "../components/HeaderCentered";
-import { usePwaAlreadyInstalled } from "./../hooks/usePwaAlreadyInstalled";
 import { useContext } from "react";
 import BannerContext from "../context/BannerContext";
 import ScrollButton from "../components/ScrollButon";
 
 export default function Home() {
-  const { pwaInstall } = usePwaAlreadyInstalled();
-  const { isVisibleInNavigator } = useContext(BannerContext);
+  const { isVisibleInNavigator, pwaInstall } = useContext(BannerContext);
 
   return (
     <>

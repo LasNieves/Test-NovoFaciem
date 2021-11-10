@@ -4,7 +4,7 @@ import Layout from '../../components/Layout'
 
 const Autoridades = () => {
     return (
-        <Layout title="Novo Faciem | Autoridades" description="Autoridades Institucionales" banner={false}>
+        <Layout title="Novo Faciem | Autoridades" description="Autoridades Institucionales">
             <GridWithRound/>
         </Layout>
     )

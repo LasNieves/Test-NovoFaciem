@@ -5,7 +5,7 @@ import TwoColumnsWithImage from '../../components/TwoColumnsWithImage'
 
 const Informacion = () => {
     return (
-        <Layout  title='Novo Faciem | Información Primario' description='Información Primario' banner={false}>
+        <Layout  title='Novo Faciem | Información Primario' description='Información Primario'>
             <TwoColumnsWithImage/>
             <CenteredAccordion/>
         </Layout>

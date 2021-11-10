@@ -7,7 +7,7 @@ import SplitWithImage from '../../components/SplitWithImage'
 
 const Informacion = () => {
     return (
-        <Layout  title='Novo Faciem | Información Terciario' description='Información Terciario' banner={false}>
+        <Layout  title='Novo Faciem | Información Terciario' description='Información Terciario' >
             <SplitWithImage/>
             <SimpleCentered1/>
             <ImageWithDetails/>

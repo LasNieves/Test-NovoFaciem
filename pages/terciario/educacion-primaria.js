@@ -7,7 +7,7 @@ import SplitWithImage from '../../components/SplitWithImage'
 
 const EducacionPrimaria = () => {
     return (
-        <Layout title="Novo Faciem | Educación Primaria" description="Profesorado en Educación Primaria del Nivel Terciario" banner={false}>
+        <Layout title="Novo Faciem | Educación Primaria" description="Profesorado en Educación Primaria del Nivel Terciario">
             <SplitWithImage/>
             <Centered2x2Grid/>
             <SimpleOnBrand/>

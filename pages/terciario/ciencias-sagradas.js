@@ -7,7 +7,7 @@ import SplitWithImage from '../../components/SplitWithImage'
 
 const CienciasSagradas = () => {
     return (
-        <Layout title="Novo Faciem | Ciencias Sagradas " description="Profesorado en Ciencias Sagradas del Nivel Terciario" banner={false}>
+        <Layout title="Novo Faciem | Ciencias Sagradas " description="Profesorado en Ciencias Sagradas del Nivel Terciario">
             <SplitWithImage/>
             <Centered2x2Grid/>
             <SimpleOnBrand/>

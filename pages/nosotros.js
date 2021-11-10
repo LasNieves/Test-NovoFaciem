@@ -7,7 +7,7 @@ import SplitWithImage from '../components/SplitWithImage';
 
 const Nosotros = () => {
     return (
-        <Layout title="Novo Faciem | Nosotros" description="Información general" banner={true}>
+        <Layout title="Novo Faciem | Nosotros" description="Información general">
             <SplitWithImage index={1} />
             <Centered2x2Grid />
             <SimpleLogo />

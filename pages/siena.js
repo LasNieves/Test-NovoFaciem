@@ -4,7 +4,7 @@ import SplitScreen from '../components/SplitScreen';
 
 const Siena = () => {
     return (
-       <Layout title="Novo Faciem | Siena" description="Ingreso al Siena" banner={false}>
+       <Layout title="Novo Faciem | Siena" description="Ingreso al Siena">
            <SplitScreen/>
        </Layout>
     )

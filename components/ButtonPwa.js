@@ -5,7 +5,7 @@ import SimpleWithDismissButton from "./SimpleWithDismissButton";
 const ButtonPWA = () => {
   const [open, setOpen] = useState(true);
   const [visible, setVisible] = useState(false);
-  const {promptInstall, supportsPWA} = useContext(BannerContext)
+  const {promptInstall, supportsPWA} = useContext(BannerContext);
 
   const onClick = (evt) => {
     evt.preventDefault();

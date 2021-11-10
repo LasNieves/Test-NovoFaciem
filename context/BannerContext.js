@@ -7,6 +7,8 @@ const BannerProvider = ({ children }) => {
   const [supportsPWA, setSupportsPWA] = useState(false);
   const [promptInstall, setPromptInstall] = useState(null);
   const [isVisibleInNavigator, setIsVisibleInNavigator] = useState(false);
+  const [pwaInstall, setPwaInstall] = useState(false);
+
 
   useEffect(() => {
     const handler = (e) => {
@@ -15,6 +17,10 @@ const BannerProvider = ({ children }) => {
       setPromptInstall(e);
       setIsVisibleInNavigator(true);
     };
+    
+    if (window.matchMedia("(display-mode: standalone)").matches) {
+      setPwaInstall(true);
+    }
 
     if (isIE || isFirefox || isOpera || isSafari) {
       setIsVisibleInNavigator(true);
@@ -24,7 +30,7 @@ const BannerProvider = ({ children }) => {
     return () => window.removeEventListener("transitionend", handler);
   }, []);
 
-  const data = { promptInstall, supportsPWA, isVisibleInNavigator };
+  const data = { promptInstall, supportsPWA, isVisibleInNavigator, pwaInstall };
 
   return (
     <BannerContext.Provider value={data}>{children}</BannerContext.Provider>

@@ -7,7 +7,7 @@ import ActionsWithSharedBorders from '../components/ActionsWithSharedBorders';
 
 const Primario = () => {
     return (
-       <Layout title="Novo Faciem | Primario" description="Nivel Primario" banner={true}>
+       <Layout title="Novo Faciem | Primario" description="Nivel Primario">
            <SplitWithImage/>
            <Centered2x2Grid/>
             <SimpleCentered1/>

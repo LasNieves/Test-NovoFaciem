@@ -17,7 +17,7 @@ export default function Example() {
   }
 
   return (
-    <button onClick={switchTheme}>
+    <button onClick={switchTheme} className="h-6 w-11 p-0 m-0s border-0 rounded-full">
       <Switch
         checked={enabled}
         onChange={setEnabled}

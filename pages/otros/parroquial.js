@@ -8,7 +8,7 @@ import { faCode, faHashtag, faPen } from '@fortawesome/free-solid-svg-icons';
 
 const Parroquial = () => {
     return (
-        <Layout title="Novo Faciem | Parroquial" description="Parraquia" banner={false}>
+        <Layout title="Novo Faciem | Parroquial" description="Parraquia" >
             <WithTestimonialAndStats/>
             <SimpleThreeColumn index={0} icon={[faPen, faHashtag, faCode]}/>
             <SimpleCentered1/>

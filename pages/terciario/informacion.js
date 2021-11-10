@@ -5,7 +5,7 @@ import SimpleCentered1 from '../../components/SimpleCentered1';
 
 const Informacion = () => {
     return (
-        <Layout  title='Novo Faciem | Información Terciario' description='Información Terciario' banner={false}>
+        <Layout  title='Novo Faciem | Información Terciario' description='Información Terciario'>
             <SimpleCentered1/>
             <ImageWithDetails/>
         </Layout>

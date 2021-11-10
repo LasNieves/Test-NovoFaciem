@@ -4,17 +4,15 @@ import CenteredWithBottomBorder from "./CenteredWithBottomBorder";
 import HeaderCentered from "./HeaderCentered";
 import Seo from "./Seo";
 import SimpleCentered2 from "./SimpleCentered2";
-import { usePwaAlreadyInstalled } from "./../hooks/usePwaAlreadyInstalled";
 import ScrollButton from "./ScrollButon";
 
-const Layout = ({ children, title, description, banner }) => {
-  const { pwaInstall } = usePwaAlreadyInstalled();
-  const { isVisibleInNavigator } = useContext(BannerContext);
+const Layout = ({ children, title, description}) => {
+  const { isVisibleInNavigator, pwaInstall } = useContext(BannerContext);
 
   return (
     <>
       <Seo title={title} description={description} />
-      {(banner, !pwaInstall, isVisibleInNavigator && <HeaderCentered />)}
+      {!pwaInstall, isVisibleInNavigator && (<HeaderCentered />)}
       <CenteredWithBottomBorder />
       <main>{children}</main>
       <ScrollButton />

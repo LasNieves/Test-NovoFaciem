@@ -1,11 +1,12 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { XIcon } from "@heroicons/react/outline";
-import React, { useRef, useState } from "react";
+import React, { useRef, useContext } from "react";
 import ButtonPWA from "./ButtonPwa";
+import BannerCloseContext from './../context/BannerCloseContext';
 
 export default function HeaderCentered() {
-  const [isVisible, setIsVisible] = useState(true);
   let refBanner = useRef();
+  const { isVisible, setIsVisible } = useContext(BannerCloseContext);
 
   const handleHidden = () => {
     refBanner.current.className = "relative bg-indigo-600 animate-banner";

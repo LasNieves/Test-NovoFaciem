@@ -1,6 +1,8 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { ChevronRightIcon } from '@heroicons/react/solid'
 import { BookmarkAltIcon, BookOpenIcon, RssIcon, ViewListIcon } from '@heroicons/react/outline'
+import Link from "next/link";
+
 
 const links = [
   { title: 'Documentation', description: 'Learn how to integrate our tools with your app', icon: BookOpenIcon },
@@ -119,9 +121,9 @@ export default function WithPopularPages() {
               ))}
             </ul>
             <div className="mt-8">
-              <a href="#" className="text-base font-medium text-indigo-600 hover:text-indigo-500">
-                Or go back home<span aria-hidden="true"> &rarr;</span>
-              </a>
+              <Link href="/">
+                <p className="text-base font-medium text-indigo-600 hover:text-indigo-500 cursor-pointer">Or go back home<span aria-hidden="true"> &rarr;</span></p>
+              </Link>
             </div>
           </div>
         </div>

@@ -5,7 +5,7 @@ import WithTestimonialAndStats from '../../components/WithTestimonialAndStats';
 
 const Informacion = () => {
     return (
-        <Layout  title='Novo Faciem | Información Inicial' description='Información Inicial' banner={false}>
+        <Layout  title='Novo Faciem | Información Inicial' description='Información Inicial'>
             <WithTestimonialAndStats/>
             <CenteredAccordion/>
         </Layout>

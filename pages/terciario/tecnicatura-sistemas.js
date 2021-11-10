@@ -7,7 +7,7 @@ import SplitWithImage from '../../components/SplitWithImage'
 
 const TecnicaturaSistemas = () => {
     return (
-        <Layout title="Novo Faciem | Tecnicatura en Sistemas" description="Tecnicatura Superior en Sistemas Informáticos del Nivel Terciario" banner={false}>
+        <Layout title="Novo Faciem | Tecnicatura en Sistemas" description="Tecnicatura Superior en Sistemas Informáticos del Nivel Terciario">
             <SplitWithImage/>
             <Centered2x2Grid/>
             <SimpleOnBrand/>
