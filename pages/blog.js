@@ -1,8 +1,8 @@
-import React from "react";
-import WithPopularPages from "./../components/WithPopularPages";
+import React from 'react'
+import WithPopularPages from './../components/WithPopularPages';
 
 const Blog = () => {
-  return <WithPopularPages />;
-};
+    return <WithPopularPages/>
+}
 
 export default Blog;
