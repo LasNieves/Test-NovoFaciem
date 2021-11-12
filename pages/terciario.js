@@ -10,7 +10,7 @@ const Terciario = () => {
     <Layout title="Novo Faciem | Terciario" description="Nivel Terciario">
       <SplitWithImage />
       <Centered2x2Grid />
-      <SimpleCentered1 />
+      <SimpleCentered1 index={4}/>
       <GridWithOffsetIcons />
     </Layout>
   );

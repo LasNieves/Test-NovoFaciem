@@ -10,7 +10,7 @@ const Primario = () => {
     <Layout title="Novo Faciem | Primario" description="Nivel Primario">
       <SplitWithImage />
       <Centered2x2Grid />
-      <SimpleCentered1 />
+      <SimpleCentered1 index={2}/>
       <GridWithOffsetIcons />
     </Layout>
   );

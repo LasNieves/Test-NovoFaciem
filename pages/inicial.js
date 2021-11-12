@@ -10,7 +10,7 @@ const Inicial = () => {
     <Layout title="Novo Faciem | Inicial" description="Nivel Inicial">
       <SplitWithImage />
       <Centered2x2Grid />
-      <SimpleCentered1 />
+      <SimpleCentered1 index={1}/>
       <GridWithOffsetIcons />
     </Layout>
   );

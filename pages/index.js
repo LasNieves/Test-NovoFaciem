@@ -21,10 +21,10 @@ export default function Home() {
   return (
     <>
       <Seo title="Novo Faciem | Home" description="Bienvenidos al Home" />
-      {(!pwaInstall && isVisibleInNavigator && <HeaderCentered />)}
+      {!pwaInstall && isVisibleInNavigator && <HeaderCentered />}
       <SplitWithNavbar />
       <ColumnCards />
-      <SimpleCentered1 />
+      <SimpleCentered1 index={0} />
       <SimpleOnBrand />
       <SimpleLogo />
       <SplitWithImage index={0} />

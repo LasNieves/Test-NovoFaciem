@@ -11,7 +11,7 @@ const Parroquial = () => {
         <Layout title="Novo Faciem | Parroquial" description="Parraquia" >
             <WithTestimonialAndStats/>
             <SimpleThreeColumn index={0} icon={[faPen, faHashtag, faCode]}/>
-            <SimpleCentered1/>
+            <SimpleCentered1 index={5}/>
             <CenteredAccordion/>
         </Layout>
     )
