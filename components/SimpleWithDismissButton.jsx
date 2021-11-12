@@ -48,12 +48,12 @@ export default function SimpleWithDismissButton({ open, setOpen, setVisible }) {
             leaveFrom="opacity-100 translate-y-0 sm:scale-100"
             leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
           >
-            <div className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+            <div className="inline-block align-bottom bg-Blanco dark:bg-GrisNt rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
 
               <div className="hidden sm:block absolute top-0 right-0 pt-4 pr-4">
                 <button
                   type="button"
-                  className="bg-white text-gray-400 hover:text-gray-500 focus:outline-none"
+                  className="bg-Blanco dark:bg-GrisNt text-GrisPlata hover:text-GrisTopo dark:text-GrisClaroViolaceo focus:outline-none"
                   onClick={closeModal}
                 >
                   <span className="sr-only">Close</span>
@@ -65,7 +65,7 @@ export default function SimpleWithDismissButton({ open, setOpen, setVisible }) {
 
                 <div className="mt-4 text-center sm:justify-self-center">
                   <DownloadIcon
-                    className="h-8 w-8 text-indigo-600 inline-block mr-2 mb-2  "
+                    className="h-8 w-8 text-Turquesa inline-block mr-2 mb-2  "
                     aria-hidden="true"
                   />
                   <Dialog.Title
@@ -91,9 +91,9 @@ export default function SimpleWithDismissButton({ open, setOpen, setVisible }) {
                     <div className="sm:flex sm:flex-col">
 
                       <div className="p-1 mr-2 sm:mr-3">
-                        <UploadIcon className="h-6 w-6 text-indigo-600 inline-block mr-2 sm:mr-3 align-middle mb-1" />
+                        <UploadIcon className="h-6 w-6 text-Turquesa inline-block mr-2 sm:mr-3 align-middle mb-1" />
 
-                        <Dialog.Description className="align-baseline text-base sm:text-lg font-normal text-gray-900 inline-block">
+                        <Dialog.Description className="align-baseline text-base sm:text-lg font-normal text-SemiNegro dark:text-GrisClaroViolaceo inline-block">
                           Presione el botón <b> Compartir </b>
                         </Dialog.Description>
                       </div>
@@ -101,10 +101,10 @@ export default function SimpleWithDismissButton({ open, setOpen, setVisible }) {
                       <div className="p-1">
                         <FontAwesomeIcon
                           icon={faPlusSquare}
-                          className=" text-xl text-indigo-600 inline-block mr-2 sm:mr-3 align-middle mb-1"
+                          className=" text-xl text-Turquesa inline-block mr-2 sm:mr-3 align-middle mb-1"
                         />
 
-                        <Dialog.Description className="text-base sm:text-lg font-normal text-gray-900 inline-block">
+                        <Dialog.Description className="text-base sm:text-lg font-normal text-SemiNegro dark:text-GrisClaroViolaceo inline-block">
                           <b> Agregar </b> a la pantalla de inicio
                         </Dialog.Description>
                       </div>

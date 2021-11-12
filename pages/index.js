@@ -13,6 +13,7 @@ import HeaderCentered from "../components/HeaderCentered";
 import { useContext } from "react";
 import BannerContext from "../context/BannerContext";
 import ScrollButton from "../components/ScrollButon";
+import ColumnCards from "../components/ColumnCards";
 
 export default function Home() {
   const { isVisibleInNavigator, pwaInstall } = useContext(BannerContext);
@@ -22,6 +23,7 @@ export default function Home() {
       <Seo title="Novo Faciem | Home" description="Bienvenidos al Home" />
       {(!pwaInstall && isVisibleInNavigator && <HeaderCentered />)}
       <SplitWithNavbar />
+      <ColumnCards />
       <SimpleCentered1 />
       <SimpleOnBrand />
       <SimpleLogo />

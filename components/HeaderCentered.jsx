@@ -2,14 +2,14 @@
 import { XIcon } from "@heroicons/react/outline";
 import React, { useRef, useContext } from "react";
 import ButtonPWA from "./ButtonPwa";
-import BannerCloseContext from './../context/BannerCloseContext';
+import BannerCloseContext from "./../context/BannerCloseContext";
 
 export default function HeaderCentered() {
   let refBanner = useRef();
   const { isVisible, setIsVisible } = useContext(BannerCloseContext);
 
   const handleHidden = () => {
-    refBanner.current.className = "relative bg-indigo-600 animate-banner";
+    refBanner.current.className = "relative bg-Naranja animate-banner";
     setTimeout(() => {
       setIsVisible(false);
     }, 200);
@@ -18,10 +18,10 @@ export default function HeaderCentered() {
   return (
     <>
       {isVisible && (
-        <div className="relative bg-indigo-600" ref={refBanner}>
+        <div className="relative bg-Naranja" ref={refBanner}>
           <div className="max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
             <div className="pr-16 sm:text-center sm:px-16">
-              <p className="font-medium text-white">
+              <p className="font-medium text-Blanco">
                 <span className="md:hidden">We announced a new product!</span>
                 <span className="hidden md:inline">
                   Big news! We're excited to announce a brand new product.
@@ -35,10 +35,10 @@ export default function HeaderCentered() {
               <button
                 onClick={handleHidden}
                 type="button"
-                className="flex p-2 rounded-md hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-white"
+                className="flex p-2 rounded-md hover:bg-Naranja focus:outline-none focus:ring-2 focus:ring-B"
               >
                 <span className="sr-only">Dismiss</span>
-                <XIcon className="h-6 w-6 text-white" aria-hidden="true" />
+                <XIcon className="h-6 w-6 text-Blanco" aria-hidden="true" />
               </button>
             </div>
           </div>

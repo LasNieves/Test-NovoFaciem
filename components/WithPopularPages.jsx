@@ -1,19 +1,39 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { ChevronRightIcon } from '@heroicons/react/solid'
-import { BookmarkAltIcon, BookOpenIcon, RssIcon, ViewListIcon } from '@heroicons/react/outline'
+import { ChevronRightIcon } from "@heroicons/react/solid";
+import {
+  BookmarkAltIcon,
+  BookOpenIcon,
+  RssIcon,
+  ViewListIcon,
+} from "@heroicons/react/outline";
 import Link from "next/link";
 
-
 const links = [
-  { title: 'Documentation', description: 'Learn how to integrate our tools with your app', icon: BookOpenIcon },
-  { title: 'API Reference', description: 'A complete API reference for our libraries', icon: ViewListIcon },
-  { title: 'Guides', description: 'Installation guides that cover popular setups', icon: BookmarkAltIcon },
-  { title: 'Blog', description: 'Read our latest news and articles', icon: RssIcon },
-]
+  {
+    title: "Documentation",
+    description: "Learn how to integrate our tools with your app",
+    icon: BookOpenIcon,
+  },
+  {
+    title: "API Reference",
+    description: "A complete API reference for our libraries",
+    icon: ViewListIcon,
+  },
+  {
+    title: "Guides",
+    description: "Installation guides that cover popular setups",
+    icon: BookmarkAltIcon,
+  },
+  {
+    title: "Blog",
+    description: "Read our latest news and articles",
+    icon: RssIcon,
+  },
+];
 const social = [
   {
-    name: 'Facebook',
-    href: '#',
+    name: "Facebook",
+    href: "#",
     icon: (props) => (
       <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
         <path
@@ -25,8 +45,8 @@ const social = [
     ),
   },
   {
-    name: 'Instagram',
-    href: '#',
+    name: "Instagram",
+    href: "#",
     icon: (props) => (
       <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
         <path
@@ -38,8 +58,8 @@ const social = [
     ),
   },
   {
-    name: 'Twitter',
-    href: '#',
+    name: "Twitter",
+    href: "#",
     icon: (props) => (
       <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
         <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
@@ -47,8 +67,8 @@ const social = [
     ),
   },
   {
-    name: 'GitHub',
-    href: '#',
+    name: "GitHub",
+    href: "#",
     icon: (props) => (
       <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
         <path
@@ -60,8 +80,8 @@ const social = [
     ),
   },
   {
-    name: 'Dribbble',
-    href: '#',
+    name: "Dribbble",
+    href: "#",
     icon: (props) => (
       <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
         <path
@@ -72,11 +92,11 @@ const social = [
       </svg>
     ),
   },
-]
+];
 
 export default function WithPopularPages() {
   return (
-    <div className="bg-white">
+    <div className="bg-Blanco dark:bg-PseudoNegro">
       <main className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex-shrink-0 pt-16">
           <img
@@ -87,53 +107,87 @@ export default function WithPopularPages() {
         </div>
         <div className="max-w-xl mx-auto py-16 sm:py-24">
           <div className="text-center">
-            <p className="text-sm font-semibold text-indigo-600 uppercase tracking-wide">404 error</p>
-            <h1 className="mt-2 text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl">
+            <p className="text-sm font-semibold text-Turquesa uppercase tracking-wide">
+              404 error
+            </p>
+            <h1 className="mt-2 text-4xl font-extrabold text-AzulMarino dark:text-Gris tracking-tight sm:text-5xl">
               This page does not exist.
             </h1>
-            <p className="mt-2 text-lg text-gray-500">The page you are looking for could not be found.</p>
+            <p className="mt-2 text-lg text-GrisPlata dark:text-GrisPlata">
+              The page you are looking for could not be found.
+            </p>
           </div>
           <div className="mt-12">
-            <h2 className="text-sm font-semibold text-gray-500 tracking-wide uppercase">Popular pages</h2>
-            <ul role="list" className="mt-4 border-t border-b border-gray-200 divide-y divide-gray-200">
+            <h2 className="text-sm font-semibold text-gray-500 tracking-wide uppercase">
+              Popular pages
+            </h2>
+            <ul
+              role="list"
+              className="mt-4 border-t border-b border-SemiBlanco divide-y divide-GrisClaro"
+            >
               {links.map((link, linkIdx) => (
-                <li key={linkIdx} className="relative py-6 flex items-start space-x-4">
+                <li
+                  key={linkIdx}
+                  className="relative py-6 flex items-start space-x-4  "
+                >
                   <div className="flex-shrink-0">
-                    <span className="flex items-center justify-center h-12 w-12 rounded-lg bg-indigo-50">
-                      <link.icon className="h-6 w-6 text-indigo-700" aria-hidden="true" />
+                    <span className="flex items-center justify-center h-12 w-12 rounded-lg bg-Turquesa">
+                      <link.icon
+                        className="h-6 w-6 text-Blanco"
+                        aria-hidden="true"
+                      />
                     </span>
                   </div>
-                  <div className="min-w-0 flex-1">
-                    <h3 className="text-base font-medium text-gray-900">
-                      <span className="rounded-sm focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
-                        <a href="#" className="focus:outline-none">
-                          <span className="absolute inset-0" aria-hidden="true" />
+                  <div className="min-w-0 flex-1 ">
+                    <h3 className="text-base font-medium text-gray-900 ">
+                      <span className="rounded-sm ">
+                        <a
+                          href="#"
+                          className="text-Gris dark:text-Gris focus:outline-none"
+                        >
+                          <span
+                            className="absolute inset-0"
+                            aria-hidden="true"
+                          />
                           {link.title}
                         </a>
                       </span>
                     </h3>
-                    <p className="text-base text-gray-500">{link.description}</p>
+                    <p className="text-base text-gray-500 dark:text-GrisPlata">
+                      {link.description}
+                    </p>
                   </div>
-                  <div className="flex-shrink-0 self-center">
-                    <ChevronRightIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
+                  <div className="flex-shrink-0 self-center ">
+                    <ChevronRightIcon
+                      className="h-5 w-5 text-gray-400 "
+                      aria-hidden="true"
+                    />
                   </div>
                 </li>
               ))}
             </ul>
             <div className="mt-8">
               <Link href="/">
-                <p className="text-base font-medium text-indigo-600 hover:text-indigo-500 cursor-pointer">Or go back home<span aria-hidden="true"> &rarr;</span></p>
+                <p className="text-base font-medium text-Turquesa hover:text-TurquesaOscuro cursor-pointer">
+                  Or go back home<span aria-hidden="true"> &rarr;</span>
+                </p>
               </Link>
             </div>
           </div>
         </div>
       </main>
       <footer className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="border-t border-gray-200 py-12 text-center md:flex md:justify-between">
-          <p className="text-base text-gray-400">&copy; Workflow, Inc. All rights reserved.</p>
+        <div className="border-t border-Gris py-12 text-center md:flex md:justify-between">
+          <p className="text-base text-GrisPlata">
+            &copy; Workflow, Inc. All rights reserved.
+          </p>
           <div className="mt-6 flex justify-center space-x-8 md:mt-0">
             {social.map((item, itemIdx) => (
-              <a key={itemIdx} href={item.href} className="inline-flex text-gray-400 hover:text-gray-500">
+              <a
+                key={itemIdx}
+                href={item.href}
+                className="inline-flex text-GrisPlata hover:text-Gris"
+              >
                 <span className="sr-only">{item.name}</span>
                 <item.icon className="h-6 w-6" aria-hidden="true" />
               </a>
@@ -142,5 +196,5 @@ export default function WithPopularPages() {
         </div>
       </footer>
     </div>
-  )
+  );
 }

@@ -75,7 +75,7 @@ const navigation = {
 
 export default function SimpleCentered2() {
   return (
-    <footer className="bg-white">
+    <footer className="bg-Blanco dark:bg-PseudoNegro">
       <div className="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
         <nav
           className="-mx-5 -my-2 flex flex-wrap justify-center"
@@ -85,7 +85,7 @@ export default function SimpleCentered2() {
             <div key={item.name} className="px-5 py-2">
               <a
                 href={item.href}
-                className="text-base text-gray-500 hover:text-gray-900"
+                className="text-base text-GrisPlata hover:text-gray-900 dark:hover:text-GrisClaroViolaceo"
               >
                 {item.name}
               </a>
@@ -97,14 +97,14 @@ export default function SimpleCentered2() {
             <a
               key={item.name}
               href={item.href}
-              className="text-gray-400 hover:text-gray-500"
+              className="text-GrisClaroViolaceo hover:text-Gris"
             >
               <span className="sr-only">{item.name}</span>
               <item.icon className="h-6 w-6" aria-hidden="true" />
             </a>
           ))}
         </div>
-        <p className="mt-8 text-center text-base text-gray-400">
+        <p className="mt-8 text-center text-base text-GrisClaro">
           &copy; 2020 Workflow, Inc. All rights reserved.
         </p>
       </div>

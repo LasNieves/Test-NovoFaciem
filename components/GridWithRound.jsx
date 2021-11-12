@@ -11,12 +11,12 @@ const people = [
   
   export default function GridWithRound() {
     return (
-      <div className="bg-white">
+      <div className="bg-Blanco dark:bg-PseudoNegro">
         <div className="max-w-7xl mx-auto py-12 px-4 text-center sm:px-6 lg:px-8 lg:py-24">
           <div className="space-y-8 sm:space-y-12">
             <div className="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
-              <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">The People</h2>
-              <p className="text-xl text-gray-500">
+              <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl text-AzulMarino dark:text-Gris">The People</h2>
+              <p className="text-xl text-GrisPlata">
                 Risus velit condimentum vitae tincidunt tincidunt. Mauris ridiculus fusce amet urna nunc. Ut nisl ornare
                 diam in.
               </p>
@@ -27,9 +27,9 @@ const people = [
                   <div className="space-y-4">
                     <img className="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src={person.imageUrl} alt="" />
                     <div className="space-y-2">
-                      <div className="text-xs font-medium lg:text-sm">
+                      <div className="text-xs font-medium lg:text-sm text-SemiNegro dark:text-GrisClaro">
                         <h3>{person.name}</h3>
-                        <p className="text-indigo-600">{person.role}</p>
+                        <p className="text-Turquesa">{person.role}</p>
                       </div>
                     </div>
                   </div>

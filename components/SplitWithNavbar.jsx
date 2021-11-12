@@ -90,8 +90,8 @@ function classNames(...classes) {
 
 export default function SplitWithNavbar() {
   return (
-    <div className="relative bg-gray-50">
-      <Popover className="relative bg-white shadow">
+    <div className="relative bg-Blanco dark:bg-PseudoNegro">
+      <Popover className="relative bg-Blanco dark:bg-GrisNt shadow">
         {({ open }) => (
           <>
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -109,7 +109,7 @@ export default function SplitWithNavbar() {
                   </Link>
                 </div>
                 <div className="-mr-2 -my-2 md:hidden">
-                  <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                  <Popover.Button className="bg-Blanco dark:bg-GrisNt rounded-md p-2 inline-flex items-center justify-center text-Gris hover:text-GrisPlata hover:bg-GrisClaro focus:outline-none focus:ring-2 focus:ring-inset focus:ring-Turquesa">
                     <span className="sr-only">Open menu</span>
                     <MenuIcon className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>
@@ -120,15 +120,15 @@ export default function SplitWithNavbar() {
                       <>
                         <Popover.Button
                           className={classNames(
-                            open ? "text-gray-900" : "text-gray-500",
-                            "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 "
+                            open ? "text-GrisPlata " : "text-GrisPlata",
+                            "group bg-Blanco dark:bg-GrisNt rounded-md inline-flex items-center text-base font-medium hover:text-SemiNegro dark:hover:text-GrisClaro"
                           )}
                         >
                           <span>Niveles</span>
                           <ChevronDownIcon
                             className={classNames(
-                              open ? "text-gray-600" : "text-gray-400",
-                              "ml-2 h-5 w-5 group-hover:text-gray-500"
+                              open ? "text-GrisPlata" : "text-GrisPlata",
+                              "ml-2 h-5 w-5 group-hover:text-GrisPlata"
                             )}
                             aria-hidden="true"
                           />
@@ -148,24 +148,24 @@ export default function SplitWithNavbar() {
                             static
                             className="absolute -ml-4 mt-3 transform z-10 px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
                           >
-                            <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                              <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                            <div className="rounded-lg shadow-lg ring-1 ring-SemiNegro ring-opacity-5 overflow-hidden">
+                              <div className="relative grid gap-6 bg-Blanco dark:bg-GrisNt px-5 py-6 sm:gap-8 sm:p-8">
                                 {features.map((item) => (
                                   <Link
                                     key={item.name}
                                     href={item.href}
-                                    className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                                    className="-m-3 p-3 flex items-start rounded-lg hover:bg-Gris"
                                   >
-                                    <div className="ml-3 p-3 cursor-pointer hover:bg-gray-50 flex items-start rounded-lg">
+                                    <div className="ml-3 p-3 cursor-pointer hover:bg-SemiBlanco dark:hover:bg-PseudoNegro flex items-start rounded-lg">
                                       <item.icon
-                                        className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                                        className="flex-shrink-0 h-6 w-6 text-Turquesa"
                                         aria-hidden="true"
                                       />
                                       <div className="ml-4">
-                                        <p className="text-base font-medium text-gray-900">
+                                        <p className="text-base font-medium text-SemiNegro dark:text-GrisClaroViolaceo ">
                                           {item.name}
                                         </p>
-                                        <p className="mt-1 text-sm text-gray-500">
+                                        <p className="mt-1 text-sm text-GrisPlata">
                                           {item.description}
                                         </p>
                                       </div>
@@ -173,15 +173,15 @@ export default function SplitWithNavbar() {
                                   </Link>
                                 ))}
                               </div>
-                              <div className="px-5 py-5 bg-gray-50 space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
+                              <div className="px-5 py-5 bg-SemiBlanco dark:bg-GrisNt space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
                                 {callsToAction.map((item) => (
                                   <div key={item.name} className="flow-root">
                                     <a
                                       href={item.href}
-                                      className="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-100"
+                                      className="-m-3 p-3 flex items-center rounded-md text-base font-medium text-SemiNegro dark:text-GrisClaroViolaceo hover:bg-GrisClaro dark:hover:bg-PseudoNegro"
                                     >
                                       <item.icon
-                                        className="flex-shrink-0 h-6 w-6 text-gray-400"
+                                        className="flex-shrink-0 h-6 w-6 text-GrisPlata "
                                         aria-hidden="true"
                                       />
                                       <span className="ml-3">{item.name}</span>
@@ -197,15 +197,13 @@ export default function SplitWithNavbar() {
                   </Popover>
 
                   <Link href="/nosotros">
-                    <p className="cursor-pointer text-base font-medium text-gray-500 hover:text-gray-900 cursor-pointer">
+                    <p className="cursor-pointer text-base font-medium text-GrisPlata hover:text-SemiNegro dark:hover:text-GrisClaro cursor-pointer">
                       Nosotros
                     </p>
                   </Link>
 
-                  <Link
-                    href="/blog"
-                  >
-                    <p className="cursor-pointer text-base font-medium text-gray-500 hover:text-gray-900 cursor-pointer">
+                  <Link href="/blog">
+                    <p className="cursor-pointer text-base font-medium text-GrisPlata hover:text-SemiNegro dark:hover:text-GrisClaro">
                       Blog
                     </p>
                   </Link>
@@ -215,15 +213,15 @@ export default function SplitWithNavbar() {
                       <>
                         <Popover.Button
                           className={classNames(
-                            open ? "text-gray-900" : "text-gray-500",
-                            "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900"
+                            open ? "text-GrisPlata" : "text-GrisPlata",
+                            "group bg-Blanco dark:bg-GrisNt rounded-md inline-flex items-center text-base font-medium hover:text-SemiNegro dark:hover:text-GrisClaro"
                           )}
                         >
                           <span>Otros</span>
                           <ChevronDownIcon
                             className={classNames(
-                              open ? "text-gray-600" : "text-gray-400",
-                              "ml-2 h-5 w-5 group-hover:text-gray-500"
+                              open ? "text-GrisPlata" : "text-GrisPlata",
+                              "ml-2 h-5 w-5 group-hover:text-GrisPlata"
                             )}
                             aria-hidden="true"
                           />
@@ -244,23 +242,19 @@ export default function SplitWithNavbar() {
                             className="absolute left-1/2 z-10 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-md sm:px-0"
                           >
                             <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                              <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                              <div className="relative grid gap-6 bg-Blanco dark:bg-GrisNt px-5 py-6 sm:gap-8 sm:p-8">
                                 {resources.map((item) => (
-                                  <Link
-                                    key={item.name}
-                                    href={item.href}
-                                  >
-                                    <div className="cursor-pointer -m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
-
+                                  <Link key={item.name} href={item.href}>
+                                    <div className="cursor-pointer -m-3 p-3 flex items-start rounded-lg hover bg-Blanco hover:bg-SemiBlanco dark:bg-GrisNt dark:hover:bg-PseudoNegro">
                                       <item.icon
-                                        className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                                        className="flex-shrink-0 h-6 w-6 text-Turquesa"
                                         aria-hidden="true"
                                       />
                                       <div className="ml-4">
-                                        <p className="text-base font-medium text-gray-900">
+                                        <p className="text-base font-medium text-SemiNegro dark:text-GrisClaroViolaceo">
                                           {item.name}
                                         </p>
-                                        <p className="mt-1 text-sm text-gray-500">
+                                        <p className="mt-1 text-sm text-GrisPlata">
                                           {item.description}
                                         </p>
                                       </div>
@@ -268,9 +262,9 @@ export default function SplitWithNavbar() {
                                   </Link>
                                 ))}
                               </div>
-                              <div className="px-5 py-5 bg-gray-50 sm:px-8 sm:py-8">
+                              <div className="px-5 py-5 bg-Blanco dark:bg-GrisNt sm:px-8 sm:py-8">
                                 <div>
-                                  <h3 className="text-sm tracking-wide font-medium text-gray-500 uppercase">
+                                  <h3 className="text-sm tracking-wide font-medium text-GrisClaroViolaceo uppercase">
                                     Recent Posts
                                   </h3>
                                   <ul className="mt-4 space-y-4">
@@ -281,7 +275,7 @@ export default function SplitWithNavbar() {
                                       >
                                         <a
                                           href={item.href}
-                                          className="font-medium text-gray-900 hover:text-gray-700"
+                                          className="font-medium text-SemiNegro hover:text-PseudoNegro dark:text-Gris dark:hover:text-GrisClaroViolaceo"
                                         >
                                           {item.name}
                                         </a>
@@ -292,7 +286,7 @@ export default function SplitWithNavbar() {
                                 <div className="mt-5 text-sm">
                                   <a
                                     href="#"
-                                    className="font-medium text-indigo-600 hover:text-indigo-500"
+                                    className="font-medium text-Turquesa hover:text-TurquesaOscuro"
                                   >
                                     {" "}
                                     View all posts{" "}
@@ -312,18 +306,16 @@ export default function SplitWithNavbar() {
                 </div>
 
                 <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-                  <Link
-                    href="/siena"
-                  >
-                    <p className="cursor-pointer whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
+                  <Link href="/siena">
+                    <p className="cursor-pointer whitespace-nowrap text-base font-medium text-SemiNegro hover:text-GrisTopo dark:text-GrisClaroViolaceo dark:hover:text-Gris">
                       Sign in
                     </p>
                   </Link>
                   <Link
                     href="/siena"
-                    className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+                    className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-Blanco bg-Turquesa hover:bg-TurquesaOscuro"
                   >
-                    <p className="cursor-pointer ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
+                    <p className="cursor-pointer ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-Blanco bg-Turquesa hover:bg-TurquesaOscuro">
                       Sign up
                     </p>
                   </Link>
@@ -346,14 +338,14 @@ export default function SplitWithNavbar() {
                 static
                 className="absolute top-0 inset-x-0 z-10 p-2 transition transform origin-top-right md:hidden"
               >
-                <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
+                <div className="rounded-lg shadow-lg ring-1 ring-PseudoNegro ring-opacity-5 bg-Blanco dark:bg-GrisNt divide-y-2 divide-SemiBlanco dark:divide-PseudoNegro">
                   <div className="pt-5 pb-6 px-5">
                     <div className="flex items-center justify-between">
                       <div>
                         <ToggleWithIcon />
                       </div>
                       <div className="-mr-2">
-                        <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                        <Popover.Button className="bg-Blanco dark:bg-GrisNt rounded-md p-2 inline-flex items-center justify-center text-GrisPlata hover:text-SemiNegro dark:hover:text-Gris hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-Turquesa">
                           <span className="sr-only">Close menu</span>
                           <XIcon className="h-6 w-6" aria-hidden="true" />
                         </Popover.Button>
@@ -362,16 +354,13 @@ export default function SplitWithNavbar() {
                     <div className="mt-6">
                       <nav className="grid gap-y-8">
                         {features.map((item) => (
-                          <Link
-                            key={item.name}
-                            href={item.href}
-                          >
-                            <div className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+                          <Link key={item.name} href={item.href}>
+                            <div className="cursor-pointer -m-3 p-3 flex items-center rounded-md hover:bg-SemiBlanco dark:hover:bg-PseudoNegro">
                               <item.icon
-                                className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                                className="flex-shrink-0 h-6 w-6 text-Turquesa"
                                 aria-hidden="true"
                               />
-                              <span className="ml-3 text-base font-medium text-gray-900">
+                              <span className="ml-3 text-base font-medium text-SemiNegro dark:text-Blanco">
                                 {item.name}
                               </span>
                             </div>
@@ -382,48 +371,35 @@ export default function SplitWithNavbar() {
                   </div>
                   <div className="py-6 px-5 space-y-6">
                     <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                      <Link
-                        href="/nosotros"
-                      >
-                        <p className="cursor-pointer text-base font-medium text-gray-900 hover:text-gray-700"
-                        >
+                      <Link href="/nosotros">
+                        <p className="cursor-pointer text-base font-medium text-SemiNegro hover:text-GrisGG dark:text-GrisPlata dark:hover:text-GrisClaroViolaceo">
                           Nosotros
                         </p>
                       </Link>
 
-                      <Link
-                        href="/blog"
-                      >
-                        <p className="cursor-pointer text-base font-medium text-gray-900 hover:text-gray-700"
-                        >
+                      <Link href="/blog">
+                        <p className="cursor-pointer text-base font-medium text-SemiNegro hover:text-GrisGG dark:text-GrisPlata dark:hover:text-GrisClaroViolaceo">
                           Blog
                         </p>
                       </Link>
                       {resources.map((item) => (
-                        <Link
-                          key={item.name}
-                          href={item.href}
-                        >
-                          <p className="text-base font-medium text-gray-900 hover:text-gray-700">
+                        <Link key={item.name} href={item.href}>
+                          <p className="cursor-pointer text-base font-medium text-SemiNegro hover:text-GrisGG dark:text-GrisPlata dark:hover:text-GrisClaroViolaceo">
                             {item.name}
                           </p>
                         </Link>
                       ))}
                     </div>
                     <div>
-                      <Link
-                        href="/siena"
-                      >
-                        <p className="cursor-pointer w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
+                      <Link href="/siena">
+                        <p className="cursor-pointer w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-Turquesa hover:bg-TurquesaOscuro">
                           Sign up
                         </p>
                       </Link>
-                      <p className="mt-6 text-center text-base font-medium text-gray-500">
+                      <p className="mt-6 text-center text-base font-medium text-GrisPlata">
                         Existing customer?
-                        <Link
-                          href="/siena"
-                        >
-                          <p className="inline-block cursor-pointer text-indigo-600 hover:text-indigo-500">
+                        <Link href="/siena">
+                          <p className="inline-block cursor-pointer text-Turquesa hover:text-TurquesaOscuro">
                             Sign in
                           </p>
                         </Link>
@@ -440,13 +416,13 @@ export default function SplitWithNavbar() {
       <main className="lg:relative">
         <div className="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-48 lg:text-left">
           <div className="px-4 lg:w-1/2 sm:px-8 xl:pr-16">
-            <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
+            <h1 className="text-4xl tracking-tight font-extrabold text-AzulMarino dark:text-Gris sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
               <span className="block xl:inline">Data to enrich your</span>{" "}
-              <span className="block text-indigo-600 xl:inline">
+              <span className="block text-Turquesa xl:inline">
                 online business
               </span>
             </h1>
-            <p className="mt-3 max-w-md mx-auto text-lg text-gray-500 sm:text-xl md:mt-5 md:max-w-3xl">
+            <p className="mt-3 max-w-md mx-auto text-lg text-GrisPlata sm:text-xl md:mt-5 md:max-w-3xl">
               Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
               lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
               fugiat aliqua.
@@ -455,7 +431,7 @@ export default function SplitWithNavbar() {
               <div className="rounded-md shadow">
                 <a
                   href="#"
-                  className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
+                  className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-Turquesa hover:bg-TurquesaOscuro md:py-4 md:text-lg md:px-10"
                 >
                   Get started
                 </a>
@@ -463,7 +439,7 @@ export default function SplitWithNavbar() {
               <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
                 <a
                   href="#"
-                  className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10"
+                  className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-Turquesa bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10"
                 >
                   Live demo
                 </a>
