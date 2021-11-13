@@ -1,22 +1,60 @@
 {
-  "name": "Next PWA demo",
-  "short_name": "Mext PWA",
-  "icons": [
-    {
-      "src": "/icon.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-
-    {
-      "src": "/icon-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ],
-  "theme_color": "#FFFFFF",
-  "background_color": "#FFFFFF",
-  "start_url": "/",
-  "display": "standalone",
-  "orientation": "portrait"
+    "name": "NovoFaciem",
+    "short_name": "NovoFaciem",
+    "description": "Progessive Web App Institucional with Dark Mode and Selfmanageable using Nextjs",
+    "icons": [
+        {
+            "src": "./image/icon_1024.png",
+            "sizes": "1024x1024",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "./image/icon_512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "./image/icon_384.png",
+            "sizes": "385x384",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "./image/icon_256.png",
+            "sizes": "257x256",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "./image/icon_192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "./image/icon_128.png",
+            "sizes": "129x128",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "./image/icon_64.png",
+            "sizes": "64x64",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "./image/icon_32.png",
+            "sizes": "32x33",
+            "type": "image/png",
+            "purpose": "any"
+        }
+    ],
+    "theme_color": "#0d7e83",
+    "background_color": "#0d7e83",
+    "start_url": "/",
+    "display": "standalone",
+    "orientation": "portrait"
 }

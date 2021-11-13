@@ -10,24 +10,28 @@ import Link from "next/link";
 
 const links = [
   {
-    title: "Documentation",
+    title: "Inicial",
     description: "Learn how to integrate our tools with your app",
     icon: BookOpenIcon,
+    href: "/inicial",
   },
   {
-    title: "API Reference",
+    title: "Primario",
     description: "A complete API reference for our libraries",
     icon: ViewListIcon,
+    href: "/primario",
   },
   {
-    title: "Guides",
+    title: "Secundario",
     description: "Installation guides that cover popular setups",
     icon: BookmarkAltIcon,
+    href: "/secundario",
   },
   {
-    title: "Blog",
+    title: "Terciario",
     description: "Read our latest news and articles",
     icon: RssIcon,
+    href: "/terciario",
   },
 ];
 const social = [
@@ -98,13 +102,15 @@ export default function WithPopularPages() {
   return (
     <div className="bg-Blanco dark:bg-PseudoNegro">
       <main className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex-shrink-0 pt-16">
-          <img
-            className="mx-auto h-12 w-auto"
-            src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=600"
-            alt="Workflow"
-          />
-        </div>
+        <Link href="/">
+          <div className="flex-shrink-0 pt-16">
+            <img
+              className="mx-auto h-12 w-auto"
+              src="https://res.cloudinary.com/novofaciem/image/upload/v1636832762/icon_512_Dark_b635f20a00.png"
+              alt="Icono"
+            />
+          </div>
+        </Link>
         <div className="max-w-xl mx-auto py-16 sm:py-24">
           <div className="text-center">
             <p className="text-sm font-semibold text-Turquesa uppercase tracking-wide">
@@ -141,16 +147,14 @@ export default function WithPopularPages() {
                   <div className="min-w-0 flex-1 ">
                     <h3 className="text-base font-medium text-gray-900 ">
                       <span className="rounded-sm ">
-                        <a
-                          href="#"
+                        <Link
+                          href={link.href}
                           className="text-Gris dark:text-Gris focus:outline-none"
                         >
-                          <span
-                            className="absolute inset-0"
-                            aria-hidden="true"
-                          />
-                          {link.title}
-                        </a>
+                          <p className="text-GrisPlata dark:text-Gris cursor-pointer hover:text-SemiNegro dark:hover:text-SemiBlanco">
+                            {link.title}
+                          </p>
+                        </Link>
                       </span>
                     </h3>
                     <p className="text-base text-gray-500 dark:text-GrisPlata">

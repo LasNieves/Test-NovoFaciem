@@ -18,6 +18,7 @@ import {
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import Link from "next/link";
 import ToggleWithIcon from "./ToggleWithIcon";
+import { useDarkMode } from './../hooks/useDarkMode';
 
 const features = [
   {
@@ -89,6 +90,8 @@ function classNames(...classes) {
 }
 
 export default function SplitWithNavbar() {
+  const { switchTheme } = useDarkMode();
+
   return (
     <div className="relative bg-Blanco dark:bg-PseudoNegro">
       <Popover className="relative bg-Blanco dark:bg-GrisNt shadow">
@@ -102,8 +105,8 @@ export default function SplitWithNavbar() {
                       <span className="sr-only">Workflow</span>
                       <img
                         className="h-8 w-auto sm:h-10"
-                        src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                        alt=""
+                        src="https://res.cloudinary.com/novofaciem/image/upload/v1636832762/icon_512_Dark_b635f20a00.png"
+                        alt="Icono"
                       />
                     </div>
                   </Link>
@@ -301,9 +304,9 @@ export default function SplitWithNavbar() {
                     )}
                   </Popover>
                 </Popover.Group>
-                <div className="mt-1 hidden md:inline-block ">
+                <button onClick={switchTheme} className="p-0 m-0 h-6 w-11 border-0 border-transparent rounded-xl cursor-pointer mt-1 hidden md:inline-block">
                   <ToggleWithIcon />
-                </div>
+                </button>
 
                 <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
                   <Link href="/siena">
@@ -341,9 +344,9 @@ export default function SplitWithNavbar() {
                 <div className="rounded-lg shadow-lg ring-1 ring-PseudoNegro ring-opacity-5 bg-Blanco dark:bg-GrisNt divide-y-2 divide-SemiBlanco dark:divide-PseudoNegro">
                   <div className="pt-5 pb-6 px-5">
                     <div className="flex items-center justify-between">
-                      <div>
+                      <button onClick={switchTheme} className="p-0 m-0 h-6 w-11 border-0 border-transparent rounded-xl cursor-pointer">
                         <ToggleWithIcon />
-                      </div>
+                      </button>
                       <div className="-mr-2">
                         <Popover.Button className="bg-Blanco dark:bg-GrisNt rounded-md p-2 inline-flex items-center justify-center text-GrisPlata hover:text-SemiNegro dark:hover:text-Gris hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-Turquesa">
                           <span className="sr-only">Close menu</span>
