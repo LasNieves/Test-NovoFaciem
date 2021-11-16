@@ -4,11 +4,25 @@ import { ChevronDownIcon } from '@heroicons/react/outline'
 
 const faqs = [
   {
-    question: "What's the best thing about Switzerland?",
+    question: "¿Cuántos alumnos hay?",
     answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      "Actualmente cuenta con más de 3000 alumnos, mujeres y varones, repartidos en los distintos niveles (Inicial, Primario, Secundario y Superior) y turnos (mañana, tarde y noche) en que se desarrollan las actividades.",
   },
-  // More questions...
+  {
+    question: "¿Cuántos docentes hay?",
+    answer:
+      "Sus docentes superan los 370. Cuenta también con el Campus Cultural con una propuesta complementaria a los estudios formales.",
+  },
+  {
+    question: "¿Cuántos años tiene la institución?",
+    answer:
+      "El Instituto Nuestra Señora de las Nieves abrió sus puertas en el año 1965. Apenas contaba con unas pocas divisiones de la sección primaria."
+  },
+  {
+    question: "¿Cuántas aulas hay?",
+    answer:
+      "Más de 80 aulas, todas equipadas con pantallas electrónicas interactivas (TouchScreen) con PC incorporadas de última generación"
+  },
 ]
 
 function classNames(...classes) {
@@ -38,7 +52,7 @@ export default function CenteredAccordion() {
                       </Disclosure.Button>
                     </dt>
                     <Disclosure.Panel as="dd" className="mt-2 pr-12">
-                      <p className="text-base text-Gris">{faq.answer}</p>
+                      <p className="text-base text-GrisPlata dark:text-GrisClaroViolaceo">{faq.answer}</p>
                     </Disclosure.Panel>
                   </>
                 )}

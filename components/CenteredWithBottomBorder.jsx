@@ -102,7 +102,7 @@ export default function CenteredWithBottomBorder() {
                   <div>
                     <span className="sr-only">Workflow</span>
                     <img
-                      className="h-8 w-auto sm:h-10"
+                      className="h-10 w-auto sm:h-12"
                       src="https://res.cloudinary.com/novofaciem/image/upload/v1636832762/icon_512_Dark_b635f20a00.png"
                       alt="Icono"
                     />
@@ -311,8 +311,8 @@ export default function CenteredWithBottomBorder() {
               </button>
               <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
                 <Link href="/siena">
-                  <p className="cursor-pointer whitespace-nowrap text-base font-medium text-SemiNegro hover:text-GrisTopo dark:hover:text-GrisPlata">
-                    Sign in
+                  <p className="cursor-pointer whitespace-nowrap text-base font-medium text-SemiNegro hover:text-GrisTopo dark:text-GrisClaroViolaceo dark:hover:text-Gris">
+                    Iniciar
                   </p>
                 </Link>
                 <Link
@@ -320,7 +320,7 @@ export default function CenteredWithBottomBorder() {
                   className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-Blanco bg-Turquesa hover:bg-TurquesaOscuro"
                 >
                   <p className="cursor-pointer ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-Blanco bg-Turquesa hover:bg-TurquesaOscuro">
-                    Sign up
+                    Registrarse
                   </p>
                 </Link>
               </div>
@@ -397,14 +397,14 @@ export default function CenteredWithBottomBorder() {
                   <div>
                     <Link href="/siena">
                       <p className="cursor-pointer w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-Turquesa hover:bg-TurquesaOscuro">
-                        Sign up
+                        Registrarse
                       </p>
                     </Link>
                     <p className="mt-6 text-center text-base font-medium text-GrisPlata">
-                      Existing customer?
+                      ¿Ya estás registrado?
                       <Link href="/siena">
-                        <p className="inline-block cursor-pointer text-Turquesa hover:text-TurquesaOscuro">
-                          Sign in
+                        <p className="ml-1 inline-block cursor-pointer text-Turquesa hover:text-TurquesaOscuro">
+                          Iniciar
                         </p>
                       </Link>
                     </p>

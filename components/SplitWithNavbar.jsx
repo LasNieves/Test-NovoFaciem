@@ -104,7 +104,7 @@ export default function SplitWithNavbar() {
                     <div>
                       <span className="sr-only">Workflow</span>
                       <img
-                        className="h-8 w-auto sm:h-10"
+                        className="h-10 w-auto sm:h-12"
                         src="https://res.cloudinary.com/novofaciem/image/upload/v1636832762/icon_512_Dark_b635f20a00.png"
                         alt="Icono"
                       />
@@ -311,7 +311,7 @@ export default function SplitWithNavbar() {
                 <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
                   <Link href="/siena">
                     <p className="cursor-pointer whitespace-nowrap text-base font-medium text-SemiNegro hover:text-GrisTopo dark:text-GrisClaroViolaceo dark:hover:text-Gris">
-                      Sign in
+                      Iniciar
                     </p>
                   </Link>
                   <Link
@@ -319,7 +319,7 @@ export default function SplitWithNavbar() {
                     className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-Blanco bg-Turquesa hover:bg-TurquesaOscuro"
                   >
                     <p className="cursor-pointer ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-Blanco bg-Turquesa hover:bg-TurquesaOscuro">
-                      Sign up
+                      Registrarse
                     </p>
                   </Link>
                 </div>
@@ -396,14 +396,14 @@ export default function SplitWithNavbar() {
                     <div>
                       <Link href="/siena">
                         <p className="cursor-pointer w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-Turquesa hover:bg-TurquesaOscuro">
-                          Sign up
+                          Registrarse
                         </p>
                       </Link>
-                      <p className="mt-6 text-center text-base font-medium text-GrisPlata">
-                        Existing customer?
+                      <p className="mt-6  text-center text-base font-medium text-GrisPlata">
+                        ¿Ya estás registrado?
                         <Link href="/siena">
-                          <p className="inline-block cursor-pointer text-Turquesa hover:text-TurquesaOscuro">
-                            Sign in
+                          <p className="ml-1 inline-block cursor-pointer text-Turquesa hover:text-TurquesaOscuro">
+                            Iniciar
                           </p>
                         </Link>
                       </p>
@@ -420,31 +420,31 @@ export default function SplitWithNavbar() {
         <div className="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-48 lg:text-left">
           <div className="px-4 lg:w-1/2 sm:px-8 xl:pr-16">
             <h1 className="text-4xl tracking-tight font-extrabold text-AzulMarino dark:text-Gris sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
-              <span className="block xl:inline">Data to enrich your</span>{" "}
+              <span className="block xl:inline">Abierta la Inscripción 2022</span>{" "}
               <span className="block text-Turquesa xl:inline">
-                online business
+                para todos los niveles
               </span>
             </h1>
             <p className="mt-3 max-w-md mx-auto text-lg text-GrisPlata sm:text-xl md:mt-5 md:max-w-3xl">
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-              lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-              fugiat aliqua.
+              El Instituto Nuestra Señora de las Nieves es un colegio parroquial, perteneciente al Arzobispado de Buenos Aires, ubicado en al barrio de Liniers, zona oeste de la Ciudad Autónoma de Buenos Aires, capital de la República Argentina.
             </p>
             <div className="mt-10 sm:flex sm:justify-center lg:justify-start">
               <div className="rounded-md shadow">
                 <a
-                  href="#"
+                  target="_blank"
+                  href="https://www.youtube.com/watch?v=99MFUWupi70&list=PL6euyvnT_iKvc7Shp3wkRY8IHwHl_B-aD"
                   className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-Turquesa hover:bg-TurquesaOscuro md:py-4 md:text-lg md:px-10"
                 >
-                  Get started
+                  Campus Cultural
                 </a>
               </div>
               <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
                 <a
-                  href="#"
+                  target="_blank"
+                  href="http://www.lasnieves.edu.ar/"
                   className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-Turquesa bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10"
                 >
-                  Live demo
+                  Sitio Web Oficial
                 </a>
               </div>
             </div>

@@ -1,45 +1,44 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { AnnotationIcon, GlobeAltIcon, LightningBoltIcon, ScaleIcon } from '@heroicons/react/outline'
+import { ComponentCentered2x2Grid } from '../helpers/data.json'
 
-const features = [
-  {
-    name: 'Competitive exchange rates',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: GlobeAltIcon,
-  },
-  {
-    name: 'No hidden fees',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: ScaleIcon,
-  },
-  {
-    name: 'Transfers are instant',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: LightningBoltIcon,
-  },
-  {
-    name: 'Mobile notifications',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: AnnotationIcon,
-  },
-]
 
-export default function Centered2x2Grid() {
+export default function Centered2x2Grid({ index }) {
+  const { title, text1, text2, name1, name2, name3, name4, description1, description2, description3, description4 } = ComponentCentered2x2Grid[index];
+
+  const features = [
+    {
+      name: name1,
+      description: description1,
+      icon: GlobeAltIcon,
+    },
+    {
+      name: name2,
+      description: description2,
+      icon: ScaleIcon,
+    },
+    {
+      name: name3,
+      description: description3,
+      icon: AnnotationIcon,
+    },
+    {
+      name: name4,
+      description: description4,
+      icon: LightningBoltIcon,
+    },
+  ]
+
   return (
     <div className="py-12 bg-Blanco dark:bg-PseudoNegro">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center">
-          <h2 className="text-base text-Turquesa font-semibold tracking-wide uppercase">Transactions</h2>
+          <h2 className="text-base text-Turquesa font-semibold tracking-wide uppercase">{title}</h2>
           <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-AzulMarino dark:text-GrisClaro sm:text-4xl">
-            A better way to send money
+            {text1}
           </p>
           <p className="mt-4 max-w-2xl text-xl text-GrisPlata lg:mx-auto">
-            Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in
-            accusamus quisquam.
+            {text2}
           </p>
         </div>
 

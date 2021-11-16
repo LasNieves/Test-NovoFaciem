@@ -9,21 +9,20 @@ export default function SimpleCentered1({ index }) {
   const api = helpHttp();
 
   useEffect(() => {
-    api.get(url)
-      .then(res => {
-        if (!res.err) {
-          setData(res[index]);
-        } else {
-          setData(null);
-        }
-      })
+    api.get(url).then((res) => {
+      if (!res.err) {
+        setData(res[index]);
+      } else {
+        setData(null);
+      }
+    });
   }, [url]);
 
   return (
     <>
-      {data &&
-        <div className="bg-Blanco  dark:bg-PseudoNegro" >
-          <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+      {data && (
+        <div className="bg-Blanco  dark:bg-PseudoNegro">
+          <div className="max-w-7xl mx-auto pb-16 pb-4 sm:pb-24 sm:pb-6 lg:pb-8">
             <div className="text-center">
               <h2 className="text-base font-semibold text-Turquesa dark:bg-transparent tracking-wide uppercase">
                 {data.titulo}
@@ -37,7 +36,7 @@ export default function SimpleCentered1({ index }) {
             </div>
           </div>
         </div>
-      }
+      )}
     </>
   );
 }

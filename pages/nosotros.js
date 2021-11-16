@@ -8,10 +8,10 @@ import SplitWithImage from "../components/SplitWithImage";
 const Nosotros = () => {
   return (
     <Layout title="Novo Faciem | Nosotros" description="Información general">
-      <SplitWithImage index={1} />
-      <Centered2x2Grid />
+      <SplitWithImage index={5} />
+      <Centered2x2Grid index={4} />
       <SimpleLogo />
-      <GridWithOffsetIcons />
+      <GridWithOffsetIcons index={4} />
     </Layout>
   );
 };

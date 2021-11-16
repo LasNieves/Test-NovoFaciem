@@ -6,13 +6,13 @@ import Seo from "./Seo";
 import SimpleCentered2 from "./SimpleCentered2";
 import ScrollButton from "./ScrollButon";
 
-const Layout = ({ children, title, description}) => {
+const Layout = ({ children, title, description }) => {
   const { isVisibleInNavigator, pwaInstall } = useContext(BannerContext);
 
   return (
     <>
       <Seo title={title} description={description} />
-      {!pwaInstall && isVisibleInNavigator && (<HeaderCentered />)}
+      {!pwaInstall && isVisibleInNavigator && <HeaderCentered />}
       <CenteredWithBottomBorder />
       <main>{children}</main>
       <ScrollButton />

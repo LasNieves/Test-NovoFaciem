@@ -6,7 +6,10 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <link rel="manifest" href="/manifest.json" />
-          <link rel="apple-touch-icon" href="/public/image/icon_192.png"></link>
+          <link
+            rel="apple-touch-icon"
+            href="/public/image/icon_192-Dark.png"
+          ></link>
           <meta name="theme-color" content="#0d7e83" />
         </Head>
         <body style={{ WebkitTapHighlightColor: "transparent" }}>
