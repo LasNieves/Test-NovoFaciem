@@ -18,7 +18,7 @@ import {
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import Link from "next/link";
 import ToggleWithIcon from "./ToggleWithIcon";
-import { useDarkMode } from './../hooks/useDarkMode';
+import { useDarkMode } from "./../hooks/useDarkMode";
 
 const features = [
   {
@@ -304,7 +304,10 @@ export default function SplitWithNavbar() {
                     )}
                   </Popover>
                 </Popover.Group>
-                <button onClick={switchTheme} className="p-0 m-0 h-6 w-11 border-0 border-transparent rounded-xl cursor-pointer mt-1 hidden md:inline-block">
+                <button
+                  onClick={switchTheme}
+                  className="p-0 m-0 h-6 w-11 border-0 border-transparent rounded-xl cursor-pointer mt-1 hidden md:inline-block"
+                >
                   <ToggleWithIcon />
                 </button>
 
@@ -344,7 +347,10 @@ export default function SplitWithNavbar() {
                 <div className="rounded-lg shadow-lg ring-1 ring-PseudoNegro ring-opacity-5 bg-Blanco dark:bg-GrisNt divide-y-2 divide-SemiBlanco dark:divide-PseudoNegro">
                   <div className="pt-5 pb-6 px-5">
                     <div className="flex items-center justify-between">
-                      <button onClick={switchTheme} className="p-0 m-0 h-6 w-11 border-0 border-transparent rounded-xl cursor-pointer">
+                      <button
+                        onClick={switchTheme}
+                        className="p-0 m-0 h-6 w-11 border-0 border-transparent rounded-xl cursor-pointer"
+                      >
                         <ToggleWithIcon />
                       </button>
                       <div className="-mr-2">
@@ -420,18 +426,24 @@ export default function SplitWithNavbar() {
         <div className="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-48 lg:text-left">
           <div className="px-4 lg:w-1/2 sm:px-8 xl:pr-16">
             <h1 className="text-4xl tracking-tight font-extrabold text-AzulMarino dark:text-Gris sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
-              <span className="block xl:inline">Abierta la Inscripción 2022</span>{" "}
+              <span className="block xl:inline">
+                Abierta la Inscripción 2022
+              </span>{" "}
               <span className="block text-Turquesa xl:inline">
                 para todos los niveles
               </span>
             </h1>
             <p className="mt-3 max-w-md mx-auto text-lg text-GrisPlata sm:text-xl md:mt-5 md:max-w-3xl">
-              El Instituto Nuestra Señora de las Nieves es un colegio parroquial, perteneciente al Arzobispado de Buenos Aires, ubicado en al barrio de Liniers, zona oeste de la Ciudad Autónoma de Buenos Aires, capital de la República Argentina.
+              El Instituto Nuestra Señora de las Nieves es un colegio
+              parroquial, perteneciente al Arzobispado de Buenos Aires, ubicado
+              en al barrio de Liniers, zona oeste de la Ciudad Autónoma de
+              Buenos Aires, capital de la República Argentina.
             </p>
             <div className="mt-10 sm:flex sm:justify-center lg:justify-start">
               <div className="rounded-md shadow">
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   href="https://www.youtube.com/watch?v=99MFUWupi70&list=PL6euyvnT_iKvc7Shp3wkRY8IHwHl_B-aD"
                   className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-Turquesa hover:bg-TurquesaOscuro md:py-4 md:text-lg md:px-10"
                 >
@@ -441,6 +453,7 @@ export default function SplitWithNavbar() {
               <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   href="http://www.lasnieves.edu.ar/"
                   className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-Turquesa bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10"
                 >
