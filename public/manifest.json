@@ -7,7 +7,7 @@
             "src": "./image/icon_1024-Dark.png",
             "sizes": "1024x1024",
             "type": "image/png",
-            "purpose": "maskable"
+            "purpose": "any"
         },
         {
             "src": "./image/icon_512-Dark.png",
@@ -49,7 +49,7 @@
             "src": "./image/icon_32-Dark.png",
             "sizes": "32x32",
             "type": "image/png",
-            "purpose": "maskable"
+            "purpose": "any"
         }
     ],
     "theme_color": "#0d7e83",
