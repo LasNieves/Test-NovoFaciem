@@ -1,4 +1,3 @@
-/* This example requires Tailwind CSS v2.0+ */
 import {
   CloudUploadIcon,
   CogIcon,
@@ -58,13 +57,8 @@ export default function GridWithOffsetIcons({ index }) {
         <div className="mt-12">
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {features.map((feature) => (
-              <a
-                href={feature.href}
-                key={feature.href}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div key={feature.name} className="pt-6">
+              <div key={feature.name} className="pt-6">
+                <a href={feature.href} rel="noopener noreferrer" target="_blank">
                   <div className="flow-root bg-SemiBlanco dark:bg-GrisNt rounded-lg px-6 pb-8">
                     <div className="-mt-6">
                       <div>
@@ -83,8 +77,8 @@ export default function GridWithOffsetIcons({ index }) {
                       </p>
                     </div>
                   </div>
-                </div>
-              </a>
+                </a>
+              </div>
             ))}
           </div>
         </div>

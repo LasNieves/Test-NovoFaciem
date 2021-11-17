@@ -1,4 +1,3 @@
-/* This example requires Tailwind CSS v2.0+ */
 import { XIcon } from "@heroicons/react/outline";
 import React, { useRef, useContext } from "react";
 import ButtonPWA from "./ButtonPwa";

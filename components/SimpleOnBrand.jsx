@@ -1,4 +1,3 @@
-/* This example requires Tailwind CSS v2.0+ */
 export default function SimpleOnBrand() {
   return (
     <div className="bg-Turquesa transition-all duration-500">

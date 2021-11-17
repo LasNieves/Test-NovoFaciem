@@ -76,9 +76,6 @@ module.exports = {
           DEFAULT: "#969696",
         },
       },
-      outline: {
-        switch: "2px solid #969696",
-      },
       zIndex: {
         n1: "-10",
       },

@@ -1,6 +1,5 @@
 import Link from "next/link";
 
-/* This example requires Tailwind CSS v2.0+ */
 export default function SimpleWithLogo() {
   return (
     <div className="min-h-screen pt-16 pb-12 flex flex-col bg-Blanco dark:bg-PseudoNegro">

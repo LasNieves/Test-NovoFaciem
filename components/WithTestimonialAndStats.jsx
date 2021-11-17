@@ -1,4 +1,3 @@
-/* This example requires Tailwind CSS v2.0+ */
 import { helpHttp } from "../helpers/helpHttp";
 import React, { useEffect, useState } from "react";
 

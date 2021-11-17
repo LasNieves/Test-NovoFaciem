@@ -1,4 +1,3 @@
-/* This example requires Tailwind CSS v2.0+ */
 import { Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { DownloadIcon, XIcon, UploadIcon } from "@heroicons/react/outline";
@@ -6,7 +5,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlusSquare } from "@fortawesome/free-regular-svg-icons";
 
 export default function SimpleWithDismissButton({ open, setOpen, setVisible }) {
-
   const closeModal = () => {
     setOpen(false);
     setVisible(false);
@@ -49,7 +47,6 @@ export default function SimpleWithDismissButton({ open, setOpen, setVisible }) {
             leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
           >
             <div className="inline-block align-bottom bg-Blanco dark:bg-GrisNt rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
-
               <div className="hidden sm:block absolute top-0 right-0 pt-4 pr-4">
                 <button
                   type="button"
@@ -62,7 +59,6 @@ export default function SimpleWithDismissButton({ open, setOpen, setVisible }) {
               </div>
 
               <div className="flex h-full">
-
                 <div className="mt-4 text-center sm:justify-self-center">
                   <DownloadIcon
                     className="h-8 w-8 text-Turquesa inline-block mr-2 mb-2  "
@@ -70,7 +66,7 @@ export default function SimpleWithDismissButton({ open, setOpen, setVisible }) {
                   />
                   <Dialog.Title
                     as="h3"
-                    className="text-xl sm:text-2xl font-medium sm:font-normal text-gray-900 inline-block"
+                    className="text-xl sm:text-2xl font-medium sm:font-normal text-SemiNegro dark:text-SemiBlanco inline-block"
                   >
                     Instalar Aplicación
                   </Dialog.Title>
@@ -78,7 +74,7 @@ export default function SimpleWithDismissButton({ open, setOpen, setVisible }) {
                   <hr className="my-3" />
 
                   <div className="mt-2 mx-2 sm:w-4/5 sm:mx-auto">
-                    <p className="text-lg font-normal text-gray-900 inline-block">
+                    <p className="text-lg font-normal text-SemiNegro dark:text-Gris inline-block">
                       Agregue la aplicación a su dispositivo para acceder
                       fácilmente a ella en cualquier momento.
                     </p>
@@ -87,13 +83,11 @@ export default function SimpleWithDismissButton({ open, setOpen, setVisible }) {
                   <hr className="my-3 w-10/12 mx-auto" />
 
                   <div className="mt-2 ">
-
                     <div className="sm:flex sm:flex-col">
-
                       <div className="p-1 mr-2 sm:mr-3">
                         <UploadIcon className="h-6 w-6 text-Turquesa inline-block mr-2 sm:mr-3 align-middle mb-1" />
 
-                        <Dialog.Description className="align-baseline text-base sm:text-lg font-normal text-SemiNegro dark:text-GrisClaroViolaceo inline-block">
+                        <Dialog.Description className="align-baseline text-base sm:text-lg font-normal text-SemiNegro dark:text-GrisClaro inline-block">
                           Presione el botón <b> Compartir </b>
                         </Dialog.Description>
                       </div>
@@ -104,11 +98,10 @@ export default function SimpleWithDismissButton({ open, setOpen, setVisible }) {
                           className=" text-xl text-Turquesa inline-block mr-2 sm:mr-3 align-middle mb-1"
                         />
 
-                        <Dialog.Description className="text-base sm:text-lg font-normal text-SemiNegro dark:text-GrisClaroViolaceo inline-block">
+                        <Dialog.Description className="text-base sm:text-lg font-normal text-SemiNegro dark:text-GrisClaro inline-block">
                           <b> Agregar </b> a la pantalla de inicio
                         </Dialog.Description>
                       </div>
-
                     </div>
                   </div>
                 </div>

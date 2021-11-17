@@ -4,52 +4,52 @@
     "description": "Progessive Web App Institucional with Dark Mode and Selfmanageable using Nextjs",
     "icons": [
         {
-            "src": "./image/icon_1024.png",
+            "src": "./image/icon_1024-Dark.png",
             "sizes": "1024x1024",
             "type": "image/png",
-            "purpose": "any"
+            "purpose": "maskable"
         },
         {
-            "src": "./image/icon_512.png",
+            "src": "./image/icon_512-Dark.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "any"
         },
         {
-            "src": "./image/icon_384.png",
-            "sizes": "385x384",
+            "src": "./image/icon_384-Dark.png",
+            "sizes": "384x384",
             "type": "image/png",
             "purpose": "any"
         },
         {
-            "src": "./image/icon_256.png",
-            "sizes": "257x256",
+            "src": "./image/icon_256-Dark.png",
+            "sizes": "256x256",
             "type": "image/png",
             "purpose": "any"
         },
         {
-            "src": "./image/icon_192.png",
+            "src": "./image/icon_192-Dark.png",
             "sizes": "192x192",
             "type": "image/png",
             "purpose": "any"
         },
         {
-            "src": "./image/icon_128.png",
-            "sizes": "129x128",
+            "src": "./image/icon_128-Dark.png",
+            "sizes": "128x129",
             "type": "image/png",
             "purpose": "any"
         },
         {
-            "src": "./image/icon_64.png",
+            "src": "./image/icon_64-Dark.png",
             "sizes": "64x64",
             "type": "image/png",
             "purpose": "any"
         },
         {
-            "src": "./image/icon_32.png",
-            "sizes": "32x33",
+            "src": "./image/icon_32-Dark.png",
+            "sizes": "32x32",
             "type": "image/png",
-            "purpose": "any"
+            "purpose": "maskable"
         }
     ],
     "theme_color": "#0d7e83",

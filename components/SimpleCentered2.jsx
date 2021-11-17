@@ -1,5 +1,4 @@
-/* This example requires Tailwind CSS v2.0+ */
-import Link from "next/link";
+import Link from 'next/link';
 
 const navigation = {
   main: [
@@ -72,7 +71,9 @@ export default function SimpleCentered2() {
         >
           {navigation.main.map((item) => (
             <div key={item.name} className="px-5 py-2">
-              <Link href={item.href}>
+              <Link
+                href={item.href}
+              >
                 <p className="cursor-pointer text-base text-GrisPlata hover:text-gray-900 dark:hover:text-GrisClaroViolaceo">
                   {item.name}
                 </p>
@@ -86,8 +87,8 @@ export default function SimpleCentered2() {
               key={item.name}
               href={item.href}
               target="_blank"
-              rel="noopener noreferrer"
               className="text-GrisClaroViolaceo hover:text-Gris"
+              rel="noopener noreferrer"
             >
               <span className="sr-only">{item.name}</span>
               <item.icon className="h-6 w-6" aria-hidden="true" />

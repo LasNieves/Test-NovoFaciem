@@ -1,4 +1,3 @@
-/* This example requires Tailwind CSS v2.0+ */
 import { AnnotationIcon, GlobeAltIcon, LightningBoltIcon, ScaleIcon } from '@heroicons/react/outline'
 import { ComponentCentered2x2Grid } from '../helpers/data.json'
 

@@ -1,4 +1,3 @@
-/* This example requires Tailwind CSS v2.0+ */
 import { Switch } from "@headlessui/react";
 import { useContext } from "react";
 import SwitchContext from "../context/SwitchContext";
@@ -13,11 +12,12 @@ export default function Example() {
   return (
     <Switch
       onChange={setEnabled}
+      style={{ border: "2px solid #969696" }}
       className={classNames(
         enabled
           ? "bg-Blanco dark:bg-PseudoNegro"
           : "bg-Blanco dark:bg-PseudoNegro",
-        "relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 outline-switch"
+        "relative inline-flex flex-shrink-0 h-6 w-11 rounded-full cursor-pointer transition-colors ease-in-out duration-200"
       )}
     >
       <span className="sr-only">Use setting</span>

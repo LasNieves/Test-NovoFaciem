@@ -1,4 +1,3 @@
-/* This example requires Tailwind CSS v2.0+ */
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ComponentSimpleThreeColumn } from "../helpers/data.json";
 
