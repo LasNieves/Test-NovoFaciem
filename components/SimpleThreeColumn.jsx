@@ -31,7 +31,7 @@ export default function SimpleThreeColumn({ index, icon }) {
           {features.map((feature) => (
             <div key={feature.name}>
               <dt>
-                <div className="flex items-center justify-center h-12 w-12 rounded-md bg-Turquesa text-Blanco">
+                <div className="flex items-center justify-center h-8 w-8 rounded-md bg-Turquesa text-Blanco">
                   <FontAwesomeIcon icon={feature.icon} />
                 </div>
                 <p className="mt-5 text-lg leading-6 font-medium text-SemiNegro dark:text-GrisClaroViolaceo">

@@ -19,7 +19,7 @@
             "src": "./image/icon_384-Dark.png",
             "sizes": "384x384",
             "type": "image/png",
-            "purpose": "any maskable"
+            "purpose": "any"
         },
         {
             "src": "./image/icon_256-Dark.png",
@@ -37,7 +37,7 @@
             "src": "./image/icon_128-Dark.png",
             "sizes": "128x129",
             "type": "image/png",
-            "purpose": "any maskable"
+            "purpose": "any"
         },
         {
             "src": "./image/icon_64-Dark.png",
@@ -53,7 +53,7 @@
         }
     ],
     "theme_color": "#0d7e83",
-    "background_color": "#16191c",
+    "background_color": "#13293D",
     "start_url": "/",
     "display": "standalone",
     "orientation": "portrait"
